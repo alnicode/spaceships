@@ -1,4 +1,4 @@
-package com.alnicode.spaceships.domain;
+package com.alnicode.spaceships.domain.dto.robotic;
 
 /**
  * The spaceship capture and send images.

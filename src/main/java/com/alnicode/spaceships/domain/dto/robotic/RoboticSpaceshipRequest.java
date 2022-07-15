@@ -11,7 +11,7 @@ import lombok.Getter;
  * @version 1.0
  */
 @Getter
-public class RoboticSpaceshipRequest extends ThrustSpaceshipRequest {
+public class RoboticSpaceshipRequest extends ThrustSpaceshipRequest implements Image, Landing {
 
     private final double speed;
     private final String speedMeasure;
@@ -24,6 +24,16 @@ public class RoboticSpaceshipRequest extends ThrustSpaceshipRequest {
         this.speed = speed;
         this.speedMeasure = speedMeasure;
         this.destinyOrbit = destinyOrbit;
+    }
+
+    @Override
+    public void sendImages() {
+
+    }
+
+    @Override
+    public void touchDown() {
+
     }
 
 }

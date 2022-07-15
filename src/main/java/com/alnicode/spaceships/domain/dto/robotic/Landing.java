@@ -1,4 +1,4 @@
-package com.alnicode.spaceships.domain;
+package com.alnicode.spaceships.domain.dto.robotic;
 
 /**
  * Allows the spaceship to land at its destiny.
