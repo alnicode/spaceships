@@ -19,8 +19,8 @@ public class RoboticSpaceshipRequest extends ThrustSpaceshipRequest implements I
 
     public RoboticSpaceshipRequest(final double weight, final String weightMeasure, final int height, final String heightMeasure,
                                final String mission, final String fuel, final String state, final double thrust, final String thrustMeasure,
-                               final double speed, final String speedMeasure, final String destinyOrbit) {
-        super(weight, weightMeasure, height, heightMeasure, mission, fuel, state, thrust, thrustMeasure);
+                               final double speed, final String speedMeasure, final String destinyOrbit, final long inventoryId) {
+        super(weight, weightMeasure, height, heightMeasure, mission, fuel, state, thrust, thrustMeasure, inventoryId);
         this.speed = speed;
         this.speedMeasure = speedMeasure;
         this.destinyOrbit = destinyOrbit;

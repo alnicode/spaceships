@@ -21,5 +21,6 @@ public abstract class SpacecraftRequest {
     private final String mission;
     private final String fuel;
     private final String state;
+    private final long inventoryId;
 
 }

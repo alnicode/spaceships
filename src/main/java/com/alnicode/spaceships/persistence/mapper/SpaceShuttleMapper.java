@@ -30,7 +30,6 @@ public interface SpaceShuttleMapper extends BaseMapper<SpaceShuttle, SpaceShuttl
      * @param request the request to map.
      * @return the entity mapped.
      */
-    @Mapping(target = "inventoryId", ignore = true)
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "inventory", ignore = true)
     @Mapping(target = "weight", expression = "java(request.getWeight() + \" \" + request.getWeightMeasure())")
