@@ -55,6 +55,10 @@ public class RoboticSpaceshipServiceImpl implements RoboticSpaceshipService {
     }
 
     @Override
+    public void touchDown(RoboticSpaceshipRequest request) {
+    }
+
+    @Override
     public BaseMapper<RoboticSpaceship, RoboticSpaceshipResponse> mapper() {
         return mapper;
     }

@@ -31,4 +31,11 @@ public interface RoboticSpaceshipService extends ThrustSpaceshipService<RoboticS
      */
     Optional<List<RoboticSpaceshipResponse>> findByDestinyOrbit(String destinyOrbit);
 
+    /**
+     * makes the spaceship land.
+     *
+     * @param request the naveship.
+     */
+    void touchDown(RoboticSpaceshipRequest request);
+
 }
