@@ -37,6 +37,9 @@ public abstract class Spacecraft {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, length = SpacecraftConstants.NAME_LENGTH, unique = true)
+    private String name;
+
     @Column(nullable = false, length = SpacecraftConstants.WEIGHT_LENGTH)
     private String weight;
 

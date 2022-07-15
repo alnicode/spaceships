@@ -13,6 +13,7 @@ public interface SpacecraftConstants {
     int MISSION_LENGTH = 140;
     int FUEL_LENGTH = 120;
     int STATE_LENGTH = 120;
+    int NAME_LENGTH = 200;
     String MAP_WEIGHT = "java(request.getWeight() + \" \" + request.getWeightMeasure())";
     String MAP_HEIGHT = "java(request.getHeight() + \" \" + request.getHeightMeasure())";
 }
