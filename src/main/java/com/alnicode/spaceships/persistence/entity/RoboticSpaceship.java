@@ -32,4 +32,7 @@ public class RoboticSpaceship extends ThrustSpaceship {
     @Column(nullable = false, length = RoboticSpaceshipConstants.DESTINY_ORBIT_LENGTH, name = "destiny_orbit")
     private String destinyOrbit;
 
+    @Column(nullable = false, name = "image_status")
+    private boolean imageStatus = false;
+
 }

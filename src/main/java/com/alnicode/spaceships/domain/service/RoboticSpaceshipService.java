@@ -15,6 +15,8 @@ import java.util.Optional;
  */
 public interface RoboticSpaceshipService extends ThrustSpaceshipService<RoboticSpaceship, RoboticSpaceshipRequest, RoboticSpaceshipResponse> {
 
+    Optional<List<RoboticSpaceshipResponse>> getByImageStatus(boolean imageStatus);
+
     /**
      * Find a robotic spaceship by the speed.
      *

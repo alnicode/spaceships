@@ -15,13 +15,15 @@ public class RoboticSpaceshipResponse extends ThrustSpaceshipResponse {
 
     private final String speed;
     private final String destinyOrbit;
+    private final boolean imageStatus;
 
     public RoboticSpaceshipResponse(final long id, final String weight, final String height, final String mission,
                                     final String fuel, final String state, final String thrust, final String speed,
-                                    final String destinyOrbit, final String name) {
+                                    final String destinyOrbit, final String name, final boolean imageStatus) {
         super(id, name, weight, height, mission, fuel, state, thrust);
         this.speed = speed;
         this.destinyOrbit = destinyOrbit;
+        this.imageStatus = imageStatus;
     }
 
 }

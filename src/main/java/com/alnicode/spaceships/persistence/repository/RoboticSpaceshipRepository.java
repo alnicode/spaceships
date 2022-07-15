@@ -31,4 +31,12 @@ public interface RoboticSpaceshipRepository extends ThrustSpaceshipRepository<Ro
      */
     Optional<List<RoboticSpaceship>> findByDestinyOrbit(String destinyOrbit);
 
+    /**
+     * Find a robotic spaceship by the image status.
+     *
+     * @param imageStatus the image status to search.
+     * @return an optional of the spaceships found.
+     */
+    Optional<List<RoboticSpaceship>> findByImageStatus(boolean imageStatus);
+
 }

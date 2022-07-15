@@ -3,6 +3,7 @@ package com.alnicode.spaceships.domain.dto.robotic;
 import com.alnicode.spaceships.domain.dto.thrust.ThrustSpaceshipRequest;
 import com.alnicode.spaceships.util.enums.StateType;
 import lombok.Getter;
+import lombok.Setter;
 
 /**
  * The {@code RoboticSpaceship} request model dto.
@@ -17,6 +18,7 @@ public class RoboticSpaceshipRequest extends ThrustSpaceshipRequest implements I
     private final double speed;
     private final String speedMeasure;
     private final String destinyOrbit;
+    private @Setter boolean imageStatus;
 
     public RoboticSpaceshipRequest(final double weight, final String weightMeasure, final int height,
                                    final String heightMeasure, final String mission, final String fuel, final double thrust,

@@ -45,6 +45,11 @@ public class RoboticSpaceshipServiceImpl implements RoboticSpaceshipService {
     }
 
     @Override
+    public Optional<List<RoboticSpaceshipResponse>> getByImageStatus(boolean imageStatus) {
+        return repository.findByImageStatus(imageStatus).map(mapper::toResponses);
+    }
+
+    @Override
     public Optional<List<RoboticSpaceshipResponse>> findBySpeed(String speed) {
         return repository.findBySpeed(speed).map(mapper::toResponses);
     }
