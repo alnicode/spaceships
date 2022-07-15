@@ -3,6 +3,7 @@ package com.alnicode.spaceships.persistence.entity;
 import com.alnicode.spaceships.constants.SpaceShuttleConstants;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,6 +23,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "space_shuttles")
+@PrimaryKeyJoinColumn(name = "space_shuttle_id")
 public class SpaceShuttle extends ThrustSpaceship {
 
     @Column(nullable = false, length = SpaceShuttleConstants.TRANSPORT_LENGTH)

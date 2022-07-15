@@ -31,7 +31,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "spacecrafts")
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Spacecraft {
+public abstract class Spacecraft {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

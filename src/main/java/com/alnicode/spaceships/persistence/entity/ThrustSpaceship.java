@@ -2,6 +2,9 @@ package com.alnicode.spaceships.persistence.entity;
 
 import com.alnicode.spaceships.constants.ThrustSpaceshipConstants;
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,7 +20,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class ThrustSpaceship extends Spacecraft {
+@Entity
+@Table(name = "thrust_spaceships")
+@PrimaryKeyJoinColumn(name = "thrust_spaceship_id")
+public abstract class ThrustSpaceship extends Spacecraft {
 
     @Column(nullable = false, length = ThrustSpaceshipConstants.THRUST_LENGTH)
     private String thrust;
