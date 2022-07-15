@@ -74,6 +74,20 @@ public class RoboticSpaceshipServiceImpl implements RoboticSpaceshipService {
     }
 
     @Override
+    public void sendImages(RoboticSpaceshipRequest request) {
+        final var entity = repository.findByName(request.getName());
+
+        if (entity.isPresent()) {
+            request.sendImages();
+
+            final var spaceship = mapper.toEntity(request);
+            spaceship.setId(entity.get().getId());
+
+            repository.save(spaceship);
+        }
+    }
+
+    @Override
     public BaseMapper<RoboticSpaceship, RoboticSpaceshipResponse> mapper() {
         return mapper;
     }
