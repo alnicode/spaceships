@@ -17,7 +17,6 @@ public abstract class SpacecraftResponse {
     private final long id;
     private final String weight;
     private final String height;
-    private final String heightMeasure;
     private final String mission;
     private final String fuel;
     private final String state;
