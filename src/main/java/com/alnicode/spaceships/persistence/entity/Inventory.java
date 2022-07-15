@@ -1,6 +1,6 @@
 package com.alnicode.spaceships.persistence.entity;
 
-import com.alnicode.spaceships.constants.InventoryConstants;
+import com.alnicode.spaceships.util.constants.InventoryConstants;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;

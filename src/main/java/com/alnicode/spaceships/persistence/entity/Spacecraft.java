@@ -1,6 +1,6 @@
 package com.alnicode.spaceships.persistence.entity;
 
-import com.alnicode.spaceships.constants.SpacecraftConstants;
+import com.alnicode.spaceships.util.constants.SpacecraftConstants;
 import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

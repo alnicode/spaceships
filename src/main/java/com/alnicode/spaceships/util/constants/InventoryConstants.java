@@ -1,4 +1,4 @@
-package com.alnicode.spaceships.constants;
+package com.alnicode.spaceships.util.constants;
 
 /**
  * The {@code Inventory} constants.

@@ -1,4 +1,4 @@
-package com.alnicode.spaceships.constants;
+package com.alnicode.spaceships.util.constants;
 
 /**
  * The {@code MannedSpaceship} constants.
@@ -6,7 +6,7 @@ package com.alnicode.spaceships.constants;
  * @author Alben Bustamante
  * @version 1.0
  * @since 1.0
- * @see com.alnicode.spaceships.constants.SpacecraftConstants
+ * @see SpacecraftConstants
  */
 public interface MannedSpaceshipConstants extends SpacecraftConstants {
     int EARTH_ORBIT_LENGTH = 30;

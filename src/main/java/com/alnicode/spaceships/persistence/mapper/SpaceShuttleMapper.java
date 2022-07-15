@@ -1,6 +1,6 @@
 package com.alnicode.spaceships.persistence.mapper;
 
-import com.alnicode.spaceships.constants.SpaceShuttleConstants;
+import com.alnicode.spaceships.util.constants.SpaceShuttleConstants;
 import com.alnicode.spaceships.domain.dto.shuttle.SpaceShuttleRequest;
 import com.alnicode.spaceships.domain.dto.shuttle.SpaceShuttleResponse;
 import com.alnicode.spaceships.persistence.entity.SpaceShuttle;

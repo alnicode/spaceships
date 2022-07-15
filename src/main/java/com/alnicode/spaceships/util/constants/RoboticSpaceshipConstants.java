@@ -1,4 +1,4 @@
-package com.alnicode.spaceships.constants;
+package com.alnicode.spaceships.util.constants;
 
 /**
  * The {@code RoboticSpaceship} constants.
@@ -6,8 +6,8 @@ package com.alnicode.spaceships.constants;
  * @author Alben Bustamante
  * @version 1.0
  * @since 1.0
- * @see com.alnicode.spaceships.constants.ThrustSpaceshipConstants
- * @see com.alnicode.spaceships.constants.SpacecraftConstants
+ * @see ThrustSpaceshipConstants
+ * @see SpacecraftConstants
  */
 public interface RoboticSpaceshipConstants extends ThrustSpaceshipConstants {
     int SPEED_LENGTH = 20;

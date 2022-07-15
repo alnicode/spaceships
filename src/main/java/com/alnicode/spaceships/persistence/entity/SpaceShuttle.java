@@ -1,6 +1,6 @@
 package com.alnicode.spaceships.persistence.entity;
 
-import com.alnicode.spaceships.constants.SpaceShuttleConstants;
+import com.alnicode.spaceships.util.constants.SpaceShuttleConstants;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;

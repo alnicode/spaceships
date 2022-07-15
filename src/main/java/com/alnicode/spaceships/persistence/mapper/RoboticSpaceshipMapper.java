@@ -1,6 +1,6 @@
 package com.alnicode.spaceships.persistence.mapper;
 
-import com.alnicode.spaceships.constants.RoboticSpaceshipConstants;
+import com.alnicode.spaceships.util.constants.RoboticSpaceshipConstants;
 import com.alnicode.spaceships.domain.dto.robotic.RoboticSpaceshipRequest;
 import com.alnicode.spaceships.domain.dto.robotic.RoboticSpaceshipResponse;
 import com.alnicode.spaceships.persistence.entity.RoboticSpaceship;

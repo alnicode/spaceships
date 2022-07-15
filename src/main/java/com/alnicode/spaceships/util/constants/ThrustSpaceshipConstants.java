@@ -1,4 +1,4 @@
-package com.alnicode.spaceships.constants;
+package com.alnicode.spaceships.util.constants;
 
 /**
  * The {@code ThrustSpaceship} constants.
@@ -6,7 +6,7 @@ package com.alnicode.spaceships.constants;
  * @author Alben Bustamante
  * @version 1.0
  * @since 1.0
- * @see com.alnicode.spaceships.constants.SpacecraftConstants
+ * @see SpacecraftConstants
  */
 public interface ThrustSpaceshipConstants extends SpacecraftConstants {
     int THRUST_LENGTH = 30;

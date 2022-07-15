@@ -1,6 +1,6 @@
 package com.alnicode.spaceships.persistence.mapper;
 
-import com.alnicode.spaceships.constants.MannedSpaceshipConstants;
+import com.alnicode.spaceships.util.constants.MannedSpaceshipConstants;
 import com.alnicode.spaceships.domain.dto.manned.MannedSpaceshipRequest;
 import com.alnicode.spaceships.domain.dto.manned.MannedSpaceshipResponse;
 import com.alnicode.spaceships.persistence.entity.MannedSpaceship;
