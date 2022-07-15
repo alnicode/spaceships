@@ -21,7 +21,7 @@ public interface MannedSpaceshipService extends SpacecraftService<MannedSpaceshi
      * @param earthOrbit the earth orbit to search.
      * @return an optional of the spaceships found.
      */
-    Optional<List<MannedSpaceshipResponse>> findByEarthOrbit(String earthOrbit);
+    Optional<List<MannedSpaceshipResponse>> getByEarthOrbit(String earthOrbit);
 
     /**
      * Find a manned spaceship by the people capacity.
@@ -29,6 +29,6 @@ public interface MannedSpaceshipService extends SpacecraftService<MannedSpaceshi
      * @param peopleCapacity the capacity to search.
      * @return an optional of the spaceships found.
      */
-    Optional<List<MannedSpaceshipResponse>> findByPeopleCapacity(String peopleCapacity);
+    Optional<List<MannedSpaceshipResponse>> getByPeopleCapacity(String peopleCapacity);
 
 }

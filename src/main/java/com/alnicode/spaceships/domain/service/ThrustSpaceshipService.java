@@ -15,6 +15,6 @@ public interface ThrustSpaceshipService<Entity extends ThrustSpaceship, Request 
      * @param thrust the thrust to search.
      * @return an optional of the spaceships found.
      */
-    Optional<List<Response>> findByThrust(String thrust);
+    Optional<List<Response>> getByThrust(String thrust);
 
 }

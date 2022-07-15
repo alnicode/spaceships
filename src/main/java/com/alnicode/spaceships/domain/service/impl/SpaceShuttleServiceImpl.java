@@ -45,12 +45,12 @@ public class SpaceShuttleServiceImpl implements SpaceShuttleService {
     }
 
     @Override
-    public Optional<List<SpaceShuttleResponse>> findByTransport(String transport) {
+    public Optional<List<SpaceShuttleResponse>> getByTransport(String transport) {
         return repository.findByTransport(transport).map(mapper::toResponses);
     }
 
     @Override
-    public Optional<List<SpaceShuttleResponse>> findByPower(String power) {
+    public Optional<List<SpaceShuttleResponse>> getByPower(String power) {
         return repository.findByPower(power).map(mapper::toResponses);
     }
 
@@ -65,12 +65,12 @@ public class SpaceShuttleServiceImpl implements SpaceShuttleService {
     }
 
     @Override
-    public Optional<SpaceShuttleResponse> findByName(String name) {
+    public Optional<SpaceShuttleResponse> getByName(String name) {
         return repository.findByName(name).map(mapper::toResponse);
     }
 
     @Override
-    public Optional<List<SpaceShuttleResponse>> findByThrust(String thrust) {
+    public Optional<List<SpaceShuttleResponse>> getByThrust(String thrust) {
         return repository.findByThrust(thrust).map(mapper::toResponses);
     }
 }

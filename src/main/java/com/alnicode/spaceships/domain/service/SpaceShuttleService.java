@@ -21,7 +21,7 @@ public interface SpaceShuttleService extends ThrustSpaceshipService<SpaceShuttle
      * @param transport the transport to search.
      * @return an optional of the spaceships found.
      */
-    Optional<List<SpaceShuttleResponse>> findByTransport(String transport);
+    Optional<List<SpaceShuttleResponse>> getByTransport(String transport);
 
     /**
      * Find a space shuttle by the power.
@@ -29,6 +29,6 @@ public interface SpaceShuttleService extends ThrustSpaceshipService<SpaceShuttle
      * @param power the power to search.
      * @return an optional of the spaceships found.
      */
-    Optional<List<SpaceShuttleResponse>> findByPower(String power);
+    Optional<List<SpaceShuttleResponse>> getByPower(String power);
 
 }

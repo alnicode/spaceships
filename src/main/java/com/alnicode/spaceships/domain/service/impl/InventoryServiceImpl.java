@@ -42,12 +42,12 @@ public class InventoryServiceImpl implements InventoryService {
     }
 
     @Override
-    public Optional<InventoryResponse> findByName(String name) {
+    public Optional<InventoryResponse> getByName(String name) {
         return repository.findByName(name).map(mapper::toResponse);
     }
 
     @Override
-    public Optional<InventoryResponse> findBySpacecraftsId(long spacecraftId) {
+    public Optional<InventoryResponse> getBySpacecraftsId(long spacecraftId) {
         return repository.findBySpacecraftsId(spacecraftId).map(mapper::toResponse);
     }
 

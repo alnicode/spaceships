@@ -50,12 +50,12 @@ public class RoboticSpaceshipServiceImpl implements RoboticSpaceshipService {
     }
 
     @Override
-    public Optional<List<RoboticSpaceshipResponse>> findBySpeed(String speed) {
+    public Optional<List<RoboticSpaceshipResponse>> getBySpeed(String speed) {
         return repository.findBySpeed(speed).map(mapper::toResponses);
     }
 
     @Override
-    public Optional<List<RoboticSpaceshipResponse>> findByDestinyOrbit(String destinyOrbit) {
+    public Optional<List<RoboticSpaceshipResponse>> getByDestinyOrbit(String destinyOrbit) {
         return repository.findByDestinyOrbit(destinyOrbit).map(mapper::toResponses);
     }
 
@@ -98,12 +98,12 @@ public class RoboticSpaceshipServiceImpl implements RoboticSpaceshipService {
     }
 
     @Override
-    public Optional<RoboticSpaceshipResponse> findByName(String name) {
+    public Optional<RoboticSpaceshipResponse> getByName(String name) {
         return repository.findByName(name).map(mapper::toResponse);
     }
 
     @Override
-    public Optional<List<RoboticSpaceshipResponse>> findByThrust(String thrust) {
+    public Optional<List<RoboticSpaceshipResponse>> getByThrust(String thrust) {
         return repository.findByThrust(thrust).map(mapper::toResponses);
     }
 

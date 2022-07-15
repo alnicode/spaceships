@@ -37,7 +37,7 @@ public interface SpacecraftService<Entity extends Spacecraft, Request extends Sp
      * @param name the name to search.
      * @return an optional of the spaceship found.
      */
-    Optional<Response> findByName(String name);
+    Optional<Response> getByName(String name);
 
     /**
      * Find an element by the weight.
@@ -45,7 +45,7 @@ public interface SpacecraftService<Entity extends Spacecraft, Request extends Sp
      * @param weight the weight to search.
      * @return an optional of the elements found.
      */
-    default Optional<List<Response>> findByWeight(String weight) {
+    default Optional<List<Response>> getByWeight(String weight) {
         return repository().findByWeight(weight).map(mapper()::toResponses);
     }
 
@@ -55,7 +55,7 @@ public interface SpacecraftService<Entity extends Spacecraft, Request extends Sp
      * @param height the height to search.
      * @return an optional of the elements found.
      */
-    default Optional<List<Response>> findByHeight(String height) {
+    default Optional<List<Response>> getByHeight(String height) {
         return repository().findByHeight(height).map(mapper()::toResponses);
     }
 
@@ -65,7 +65,7 @@ public interface SpacecraftService<Entity extends Spacecraft, Request extends Sp
      * @param fuel the weight to search.
      * @return an optional of the elements found.
      */
-    default Optional<List<Response>> findByFuel(String fuel) {
+    default Optional<List<Response>> getByFuel(String fuel) {
         return repository().findByFuel(fuel).map(mapper()::toResponses);
     }
 
@@ -75,7 +75,7 @@ public interface SpacecraftService<Entity extends Spacecraft, Request extends Sp
      * @param state the state to search.
      * @return an optional of the elements found.
      */
-    default Optional<List<Response>> findByState(String state) {
+    default Optional<List<Response>> getByState(String state) {
         return repository().findByState(state).map(mapper()::toResponses);
     }
 
@@ -85,7 +85,7 @@ public interface SpacecraftService<Entity extends Spacecraft, Request extends Sp
      * @param inventoryId the inventory to search.
      * @return an optional of the elements found.
      */
-    default Optional<List<Response>> findByInventoryId(long inventoryId) {
+    default Optional<List<Response>> getByInventoryId(long inventoryId) {
         return repository().findByInventoryId(inventoryId).map(mapper()::toResponses);
     }
 

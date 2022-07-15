@@ -23,7 +23,7 @@ public interface RoboticSpaceshipService extends ThrustSpaceshipService<RoboticS
      * @param speed the speed to search.
      * @return an optional of the spaceships found.
      */
-    Optional<List<RoboticSpaceshipResponse>> findBySpeed(String speed);
+    Optional<List<RoboticSpaceshipResponse>> getBySpeed(String speed);
 
     /**
      * Find a robotic spaceship by the destiny orbit.
@@ -31,7 +31,7 @@ public interface RoboticSpaceshipService extends ThrustSpaceshipService<RoboticS
      * @param destinyOrbit the destiny orbit to search.
      * @return an optional of the spaceships found.
      */
-    Optional<List<RoboticSpaceshipResponse>> findByDestinyOrbit(String destinyOrbit);
+    Optional<List<RoboticSpaceshipResponse>> getByDestinyOrbit(String destinyOrbit);
 
     /**
      * Makes the spaceship land.

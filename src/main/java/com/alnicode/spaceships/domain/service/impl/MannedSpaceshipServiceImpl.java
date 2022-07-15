@@ -45,12 +45,12 @@ public class MannedSpaceshipServiceImpl implements MannedSpaceshipService {
     }
 
     @Override
-    public Optional<List<MannedSpaceshipResponse>> findByEarthOrbit(String earthOrbit) {
+    public Optional<List<MannedSpaceshipResponse>> getByEarthOrbit(String earthOrbit) {
         return repository.findByEarthOrbit(earthOrbit).map(mapper::toResponses);
     }
 
     @Override
-    public Optional<List<MannedSpaceshipResponse>> findByPeopleCapacity(String peopleCapacity) {
+    public Optional<List<MannedSpaceshipResponse>> getByPeopleCapacity(String peopleCapacity) {
         return repository.findByPeopleCapacity(peopleCapacity).map(mapper::toResponses);
     }
 
@@ -65,7 +65,7 @@ public class MannedSpaceshipServiceImpl implements MannedSpaceshipService {
     }
 
     @Override
-    public Optional<MannedSpaceshipResponse> findByName(String name) {
+    public Optional<MannedSpaceshipResponse> getByName(String name) {
         return repository.findByName(name).map(mapper::toResponse);
     }
 

@@ -19,7 +19,7 @@ public interface InventoryService extends GenericService<InventoryRequest, Inven
      * @param name the name to search.
      * @return an optional of the inventory found.
      */
-    Optional<InventoryResponse> findByName(String name);
+    Optional<InventoryResponse> getByName(String name);
 
     /**
      * Find an inventory by the spacecraft id.
@@ -27,6 +27,6 @@ public interface InventoryService extends GenericService<InventoryRequest, Inven
      * @param spacecraftId the spacecraft id to search.
      * @return an optional of the inventory found.
      */
-    Optional<InventoryResponse> findBySpacecraftsId(long spacecraftId);
+    Optional<InventoryResponse> getBySpacecraftsId(long spacecraftId);
 
 }
