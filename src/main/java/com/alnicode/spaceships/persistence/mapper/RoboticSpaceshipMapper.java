@@ -35,6 +35,8 @@ public interface RoboticSpaceshipMapper extends BaseMapper<RoboticSpaceship, Rob
     @Mapping(target = "inventory", ignore = true)
     @Mapping(target = "weight", expression = RoboticSpaceshipConstants.MAP_WEIGHT)
     @Mapping(target = "height", expression = RoboticSpaceshipConstants.MAP_HEIGHT)
+    @Mapping(target = "thrust", expression = RoboticSpaceshipConstants.MAP_THRUST)
+    @Mapping(target = "speed", expression = RoboticSpaceshipConstants.MAP_SPEED)
     RoboticSpaceship toEntity(RoboticSpaceshipRequest request);
 
 }

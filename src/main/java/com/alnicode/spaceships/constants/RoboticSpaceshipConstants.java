@@ -12,4 +12,5 @@ package com.alnicode.spaceships.constants;
 public interface RoboticSpaceshipConstants extends ThrustSpaceshipConstants {
     int SPEED_LENGTH = 20;
     int DESTINY_ORBIT_LENGTH = 80;
+    String MAP_SPEED = "java(request.getSpeed() + \" \" + request.getSpeedMeasure())";
 }

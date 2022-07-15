@@ -10,4 +10,5 @@ package com.alnicode.spaceships.constants;
  */
 public interface ThrustSpaceshipConstants extends SpacecraftConstants {
     int THRUST_LENGTH = 30;
+    String MAP_THRUST = "java(request.getThrust() + \" \" + request.getThrustMeasure())";
 }
