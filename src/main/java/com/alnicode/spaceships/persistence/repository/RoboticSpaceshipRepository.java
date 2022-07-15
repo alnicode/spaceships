@@ -1,6 +1,8 @@
 package com.alnicode.spaceships.persistence.repository;
 
 import com.alnicode.spaceships.persistence.entity.RoboticSpaceship;
+import java.util.List;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,4 +15,29 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface RoboticSpaceshipRepository extends JpaRepository<RoboticSpaceship, Long> {
+
+    /**
+     * Find a robotic spaceship by the speed.
+     *
+     * @param speed the speed to search.
+     * @return an optional of the spaceships found.
+     */
+    Optional<List<RoboticSpaceship>> findBySpeed(String speed);
+
+    /**
+     * Find a robotic spaceship by the destiny orbit.
+     *
+     * @param destinyOrbit the destiny orbit to search.
+     * @return an optional of the spaceships found.
+     */
+    Optional<List<RoboticSpaceship>> findByDestinyOrbit(String destinyOrbit);
+
+    /**
+     * Find a robotic spaceship by the thrust.
+     *
+     * @param thrust the thrust to search.
+     * @return an optional of the spaceships found.
+     */
+    Optional<List<RoboticSpaceship>> findByThrust(String thrust);
+
 }
