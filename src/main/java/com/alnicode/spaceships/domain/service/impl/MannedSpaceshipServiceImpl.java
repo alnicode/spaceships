@@ -31,36 +31,37 @@ public class MannedSpaceshipServiceImpl implements MannedSpaceshipService {
 
     @Override
     public MannedSpaceshipResponse create(MannedSpaceshipRequest mannedSpaceshipRequest) {
-        return null;
+        return mapper.toResponse(repository.save(mapper.toEntity(mannedSpaceshipRequest)));
     }
 
     @Override
     public List<MannedSpaceshipResponse> getAll() {
-        return null;
+        return mapper.toResponses(repository.findAll());
     }
 
     @Override
     public Optional<MannedSpaceshipResponse> get(long id) {
-        return Optional.empty();
+        return repository.findById(id).map(mapper::toResponse);
     }
 
     @Override
     public Optional<List<MannedSpaceshipResponse>> findByEarthOrbit(String earthOrbit) {
-        return Optional.empty();
+        return repository.findByEarthOrbit(earthOrbit).map(mapper::toResponses);
     }
 
     @Override
     public Optional<List<MannedSpaceshipResponse>> findByPeopleCapacity(String peopleCapacity) {
-        return Optional.empty();
+        return repository.findByPeopleCapacity(peopleCapacity).map(mapper::toResponses);
     }
 
     @Override
     public BaseMapper<MannedSpaceship, MannedSpaceshipResponse> mapper() {
-        return null;
+        return mapper;
     }
 
     @Override
     public SpacecraftRepository<MannedSpaceship> repository() {
-        return null;
+        return repository;
     }
+
 }
