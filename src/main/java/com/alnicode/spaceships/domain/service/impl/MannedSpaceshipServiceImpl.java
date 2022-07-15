@@ -64,4 +64,9 @@ public class MannedSpaceshipServiceImpl implements MannedSpaceshipService {
         return repository;
     }
 
+    @Override
+    public Optional<MannedSpaceshipResponse> findByName(String name) {
+        return repository.findByName(name).map(mapper::toResponse);
+    }
+
 }

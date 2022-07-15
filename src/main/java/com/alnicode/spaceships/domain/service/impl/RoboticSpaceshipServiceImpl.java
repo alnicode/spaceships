@@ -69,6 +69,11 @@ public class RoboticSpaceshipServiceImpl implements RoboticSpaceshipService {
     }
 
     @Override
+    public Optional<RoboticSpaceshipResponse> findByName(String name) {
+        return repository.findByName(name).map(mapper::toResponse);
+    }
+
+    @Override
     public Optional<List<RoboticSpaceshipResponse>> findByThrust(String thrust) {
         return repository.findByThrust(thrust).map(mapper::toResponses);
     }

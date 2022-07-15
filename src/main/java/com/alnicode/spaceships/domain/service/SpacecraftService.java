@@ -32,6 +32,14 @@ public interface SpacecraftService<Entity extends Spacecraft, Request extends Sp
     SpacecraftRepository<Entity> repository();
 
     /**
+     * Find a spaceship by the name.
+     *
+     * @param name the name to search.
+     * @return an optional of the spaceship found.
+     */
+    Optional<Response> findByName(String name);
+
+    /**
      * Find an element by the weight.
      *
      * @param weight the weight to search.

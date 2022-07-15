@@ -10,6 +10,14 @@ import org.springframework.stereotype.Repository;
 public interface SpacecraftRepository<Entity extends Spacecraft> extends JpaRepository<Entity, Long> {
 
     /**
+     * Find an element by the name.
+     *
+     * @param name the name to search.
+     * @return an optional of the spaceship found.
+     */
+    Optional<Entity> findByName(String name);
+
+    /**
      * Find an element by the weight.
      *
      * @param weight the weight to search.
