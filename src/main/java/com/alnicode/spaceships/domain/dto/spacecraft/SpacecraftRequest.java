@@ -15,6 +15,7 @@ import lombok.Setter;
 @Getter
 public abstract class SpacecraftRequest {
 
+    private final String name;
     private final double weight;
     private final String weightMeasure;
     private final int height;

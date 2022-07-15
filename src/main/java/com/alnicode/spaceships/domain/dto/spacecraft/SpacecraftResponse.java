@@ -15,6 +15,7 @@ import lombok.RequiredArgsConstructor;
 public abstract class SpacecraftResponse {
 
     private final long id;
+    private final String name;
     private final String weight;
     private final String height;
     private final String mission;

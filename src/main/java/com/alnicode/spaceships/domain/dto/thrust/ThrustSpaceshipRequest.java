@@ -17,9 +17,9 @@ public class ThrustSpaceshipRequest extends SpacecraftRequest {
     private final String thrustMeasure;
 
     public ThrustSpaceshipRequest(final double weight, final String weightMeasure, final int height, final String heightMeasure,
-                                  final String mission, final String fuel, final String state, final double thrust,
-                                  final String thrustMeasure, final long inventoryId) {
-        super(weight, weightMeasure, height, heightMeasure, mission, fuel, state, inventoryId);
+                                  final String mission, final String fuel, final double thrust, final String thrustMeasure,
+                                  final long inventoryId, final String name) {
+        super(name, weight, weightMeasure, height, heightMeasure, mission, fuel, inventoryId);
         this.thrust = thrust;
         this.thrustMeasure = thrustMeasure;
     }

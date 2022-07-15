@@ -16,8 +16,8 @@ public class ThrustSpaceshipResponse extends SpacecraftResponse {
     private final String thrust;
 
     public ThrustSpaceshipResponse(final long id, final String weight, final String height, final String mission,
-                                   final String fuel, final String state, final String thrust) {
-        super(id, weight, height, mission, fuel, state);
+                                   final String fuel, final String state, final String thrust, final String name) {
+        super(id, name, weight, height, mission, fuel, state);
         this.thrust = thrust;
     }
 

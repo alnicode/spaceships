@@ -16,9 +16,9 @@ public class MannedSpaceshipResponse extends SpacecraftResponse {
     private final String earthOrbit;
     private final String peopleCapacity;
 
-    public MannedSpaceshipResponse(final long id, final String weight, final String height, final String mission,
+    public MannedSpaceshipResponse(final long id, final String weight, final String height, final String mission, final String name,
                                    final String fuel, final String state, final String earthOrbit, final String peopleCapacity) {
-        super(id, weight, height, mission, fuel, state);
+        super(id, name, weight, height, mission, fuel, state);
         this.earthOrbit = earthOrbit;
         this.peopleCapacity = peopleCapacity;
     }
