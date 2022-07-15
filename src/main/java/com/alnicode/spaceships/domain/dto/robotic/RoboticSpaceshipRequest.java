@@ -1,6 +1,7 @@
 package com.alnicode.spaceships.domain.dto.robotic;
 
 import com.alnicode.spaceships.domain.dto.thrust.ThrustSpaceshipRequest;
+import com.alnicode.spaceships.util.enums.ImageStatusType;
 import com.alnicode.spaceships.util.enums.StateType;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,6 +33,9 @@ public class RoboticSpaceshipRequest extends ThrustSpaceshipRequest implements I
 
     @Override
     public void sendImages() {
+        if (getState().equals(StateType.LANDED.getName())) {
+            imageStatus = ImageStatusType.ACTIVE.state();
+        }
     }
 
     @Override

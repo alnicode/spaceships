@@ -11,11 +11,14 @@ import lombok.RequiredArgsConstructor;
  * @version 1.0
  */
 @RequiredArgsConstructor
-@Getter
 public enum ImageStatusType {
-    ACTIVE(1, "Active"),
-    INACTIVE(2, "Inactive");
+    ACTIVE(1, true),
+    INACTIVE(2, false);
 
-    private final int id;
-    private final String name;
+    private final @Getter int id;
+    private final boolean state;
+
+    public boolean state() {
+        return state;
+    }
 }
