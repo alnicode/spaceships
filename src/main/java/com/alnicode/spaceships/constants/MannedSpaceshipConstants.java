@@ -11,4 +11,6 @@ package com.alnicode.spaceships.constants;
 public interface MannedSpaceshipConstants extends SpacecraftConstants {
     int EARTH_ORBIT_LENGTH = 30;
     int PEOPLE_CAPACITY = 10;
+    String MAP_EARTH_ORBIT = "java(request.getEarthOrbit() + \" \" + request.getEarthOrbitMeasure())";
+    String MAP_PEOPLE_CAPACITY = "java(request.getPeopleCapacity() + \" persons\")";
 }
