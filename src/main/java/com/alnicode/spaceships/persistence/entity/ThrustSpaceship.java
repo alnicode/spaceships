@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * The thrust spaceship entity abstract model.
+ * The thrust spaceship entity model.
  *
  * @author Alben Bustamante
  * @version 1.0

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * The space shuttle entity abstract model.
+ * The space shuttle entity model.
  *
  * @author Alben Bustamante
  * @version 1.0

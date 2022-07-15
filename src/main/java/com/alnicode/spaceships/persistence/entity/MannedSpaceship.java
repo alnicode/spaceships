@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * The manned spaceship entity abstract model.
+ * The manned spaceship entity model.
  *
  * @author Alben Bustamante
  * @version 1.0
