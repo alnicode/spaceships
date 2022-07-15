@@ -11,8 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -49,6 +49,10 @@ public class Spacecraft {
     @Column(nullable = false, length = SpacecraftConstants.STATE_LENGTH)
     private String state;
 
+    @Column(name = "inventory_id", nullable = false)
+    private Long inventoryId;
+
+    @JoinColumn(name = "inventory_id", updatable = false, insertable = false)
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Inventory inventory;
 
