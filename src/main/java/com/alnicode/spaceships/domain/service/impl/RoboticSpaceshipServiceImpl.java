@@ -56,6 +56,16 @@ public class RoboticSpaceshipServiceImpl implements RoboticSpaceshipService {
 
     @Override
     public void touchDown(RoboticSpaceshipRequest request) {
+        final var entity = repository.findByName(request.getName());
+
+        if (entity.isPresent()) {
+            request.touchDown();
+
+            final var spaceship = mapper.toEntity(request);
+            spaceship.setId(entity.get().getId());
+
+            repository.save(spaceship);
+        }
     }
 
     @Override
