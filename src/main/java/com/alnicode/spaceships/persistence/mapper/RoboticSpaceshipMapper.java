@@ -1,5 +1,6 @@
 package com.alnicode.spaceships.persistence.mapper;
 
+import com.alnicode.spaceships.constants.RoboticSpaceshipConstants;
 import com.alnicode.spaceships.domain.dto.robotic.RoboticSpaceshipRequest;
 import com.alnicode.spaceships.domain.dto.robotic.RoboticSpaceshipResponse;
 import com.alnicode.spaceships.persistence.entity.RoboticSpaceship;
@@ -32,6 +33,8 @@ public interface RoboticSpaceshipMapper extends BaseMapper<RoboticSpaceship, Rob
      */
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "inventory", ignore = true)
+    @Mapping(target = "weight", expression = RoboticSpaceshipConstants.MAP_WEIGHT)
+    @Mapping(target = "height", expression = RoboticSpaceshipConstants.MAP_HEIGHT)
     RoboticSpaceship toEntity(RoboticSpaceshipRequest request);
 
 }

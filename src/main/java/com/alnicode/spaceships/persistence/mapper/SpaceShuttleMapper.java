@@ -1,5 +1,6 @@
 package com.alnicode.spaceships.persistence.mapper;
 
+import com.alnicode.spaceships.constants.SpaceShuttleConstants;
 import com.alnicode.spaceships.domain.dto.shuttle.SpaceShuttleRequest;
 import com.alnicode.spaceships.domain.dto.shuttle.SpaceShuttleResponse;
 import com.alnicode.spaceships.persistence.entity.SpaceShuttle;
@@ -32,8 +33,8 @@ public interface SpaceShuttleMapper extends BaseMapper<SpaceShuttle, SpaceShuttl
      */
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "inventory", ignore = true)
-    @Mapping(target = "weight", expression = "java(request.getWeight() + \" \" + request.getWeightMeasure())")
-    @Mapping(target = "height", expression = "java(request.getHeight() + \" \" + request.getHeightMeasure())")
+    @Mapping(target = "weight", expression = SpaceShuttleConstants.MAP_WEIGHT)
+    @Mapping(target = "height", expression = SpaceShuttleConstants.MAP_HEIGHT)
     SpaceShuttle toEntity(SpaceShuttleRequest request);
 
 }
