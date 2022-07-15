@@ -35,6 +35,7 @@ public interface SpaceShuttleMapper extends BaseMapper<SpaceShuttle, SpaceShuttl
     @Mapping(target = "inventory", ignore = true)
     @Mapping(target = "weight", expression = SpaceShuttleConstants.MAP_WEIGHT)
     @Mapping(target = "height", expression = SpaceShuttleConstants.MAP_HEIGHT)
+    @Mapping(target = "thrust", expression = SpaceShuttleConstants.MAP_THRUST)
     SpaceShuttle toEntity(SpaceShuttleRequest request);
 
 }
