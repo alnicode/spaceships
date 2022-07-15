@@ -1,7 +1,6 @@
 package com.alnicode.spaceships.persistence.mapper;
 
 import java.util.List;
-import org.mapstruct.Mapper;
 
 /**
  * The base entity/dto mapper.
@@ -10,7 +9,6 @@ import org.mapstruct.Mapper;
  * @since 1.0
  * @version 1.0
  */
-@Mapper(componentModel = "spring")
 public interface BaseMapper<Entity, Response> {
 
     /**
