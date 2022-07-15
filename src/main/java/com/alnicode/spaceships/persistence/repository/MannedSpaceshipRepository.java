@@ -3,7 +3,6 @@ package com.alnicode.spaceships.persistence.repository;
 import com.alnicode.spaceships.persistence.entity.MannedSpaceship;
 import java.util.List;
 import java.util.Optional;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,7 +13,7 @@ import org.springframework.stereotype.Repository;
  * @version 1.0
  */
 @Repository
-public interface MannedSpaceshipRepository extends JpaRepository<MannedSpaceship, Long> {
+public interface MannedSpaceshipRepository extends SpacecraftRepository<MannedSpaceship> {
 
     /**
      * Find a manned spaceship by the earth orbit.

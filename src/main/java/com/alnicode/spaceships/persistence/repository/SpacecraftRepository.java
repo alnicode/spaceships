@@ -3,10 +3,11 @@ package com.alnicode.spaceships.persistence.repository;
 import com.alnicode.spaceships.persistence.entity.Spacecraft;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SpacecraftRepository {
+public interface SpacecraftRepository<Entity extends Spacecraft> extends JpaRepository<Entity, Long> {
 
     /**
      * Find an element by the weight.
@@ -14,7 +15,7 @@ public interface SpacecraftRepository {
      * @param weight the weight to search.
      * @return an optional of the elements found.
      */
-    Optional<List<Spacecraft>> findByWeight(String weight);
+    Optional<List<Entity>> findByWeight(String weight);
 
     /**
      * Find an element by the height.
@@ -22,7 +23,7 @@ public interface SpacecraftRepository {
      * @param height the height to search.
      * @return an optional of the elements found.
      */
-    Optional<List<Spacecraft>> findByHeight(String height);
+    Optional<List<Entity>> findByHeight(String height);
 
     /**
      * Find an element by the fuel.
@@ -30,7 +31,7 @@ public interface SpacecraftRepository {
      * @param fuel the weight to search.
      * @return an optional of the elements found.
      */
-    Optional<List<Spacecraft>> findByFuel(String fuel);
+    Optional<List<Entity>> findByFuel(String fuel);
 
     /**
      * Find an element by the state.
@@ -38,7 +39,7 @@ public interface SpacecraftRepository {
      * @param state the state to search.
      * @return an optional of the elements found.
      */
-    Optional<List<Spacecraft>> findByState(String state);
+    Optional<List<Entity>> findByState(String state);
 
     /**
      * Find an element by the inventory id.
@@ -46,6 +47,6 @@ public interface SpacecraftRepository {
      * @param inventoryId the inventory to search.
      * @return an optional of the elements found.
      */
-    Optional<List<Spacecraft>> findByInventoryId(long inventoryId);
+    Optional<List<Entity>> findByInventoryId(long inventoryId);
 
 }

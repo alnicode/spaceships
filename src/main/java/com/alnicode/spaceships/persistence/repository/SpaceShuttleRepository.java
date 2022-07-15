@@ -3,7 +3,6 @@ package com.alnicode.spaceships.persistence.repository;
 import com.alnicode.spaceships.persistence.entity.SpaceShuttle;
 import java.util.List;
 import java.util.Optional;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,7 +13,7 @@ import org.springframework.stereotype.Repository;
  * @since 1.0
  */
 @Repository
-public interface SpaceShuttleRepository extends JpaRepository<SpaceShuttle, Long> {
+public interface SpaceShuttleRepository extends ThrustSpaceshipRepository<SpaceShuttle> {
 
     /**
      * Find a space shuttle by the transport.
@@ -31,13 +30,5 @@ public interface SpaceShuttleRepository extends JpaRepository<SpaceShuttle, Long
      * @return an optional of the spaceships found.
      */
     Optional<List<SpaceShuttle>> findByPower(String power);
-
-    /**
-     * Find a space shuttle by the thrust.
-     *
-     * @param thrust the thrust to search.
-     * @return an optional of the spaceships found.
-     */
-    Optional<List<SpaceShuttle>> findByThrust(String thrust);
 
 }
