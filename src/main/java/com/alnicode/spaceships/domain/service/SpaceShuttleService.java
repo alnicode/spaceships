@@ -2,6 +2,7 @@ package com.alnicode.spaceships.domain.service;
 
 import com.alnicode.spaceships.domain.dto.shuttle.SpaceShuttleRequest;
 import com.alnicode.spaceships.domain.dto.shuttle.SpaceShuttleResponse;
+import com.alnicode.spaceships.persistence.entity.SpaceShuttle;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,7 +13,7 @@ import java.util.Optional;
  * @since 1.0
  * @version 1.0
  */
-public interface SpaceShuttleService extends ThrustSpaceshipService<SpaceShuttleRequest, SpaceShuttleResponse> {
+public interface SpaceShuttleService extends ThrustSpaceshipService<SpaceShuttle, SpaceShuttleRequest, SpaceShuttleResponse> {
 
     /**
      * Find a space shuttle by the transport.

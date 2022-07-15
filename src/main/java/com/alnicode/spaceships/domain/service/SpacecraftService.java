@@ -2,6 +2,9 @@ package com.alnicode.spaceships.domain.service;
 
 import com.alnicode.spaceships.domain.dto.spacecraft.SpacecraftRequest;
 import com.alnicode.spaceships.domain.dto.spacecraft.SpacecraftResponse;
+import com.alnicode.spaceships.persistence.entity.Spacecraft;
+import com.alnicode.spaceships.persistence.mapper.BaseMapper;
+import com.alnicode.spaceships.persistence.repository.SpacecraftRepository;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,7 +15,21 @@ import java.util.Optional;
  * @since 1.0
  * @version 1.0
  */
-public interface SpacecraftService<Request extends SpacecraftRequest, Response extends SpacecraftResponse> extends GenericService<Request, Response> {
+public interface SpacecraftService<Entity extends Spacecraft, Request extends SpacecraftRequest, Response extends SpacecraftResponse> extends GenericService<Request, Response> {
+
+    /**
+     * Set the mapper to use.
+     *
+     * @return the mapper.
+     */
+    BaseMapper<Entity, Response> mapper();
+
+    /**
+     * Set the repository to use.
+     *
+     * @return the repository.
+     */
+    SpacecraftRepository<Entity> repository();
 
     /**
      * Find an element by the weight.
@@ -20,7 +37,9 @@ public interface SpacecraftService<Request extends SpacecraftRequest, Response e
      * @param weight the weight to search.
      * @return an optional of the elements found.
      */
-    Optional<List<Response>> findByWeight(String weight);
+    default Optional<List<Response>> findByWeight(String weight) {
+        return repository().findByWeight(weight).map(mapper()::toResponses);
+    }
 
     /**
      * Find an element by the height.
@@ -28,7 +47,9 @@ public interface SpacecraftService<Request extends SpacecraftRequest, Response e
      * @param height the height to search.
      * @return an optional of the elements found.
      */
-    Optional<List<Response>> findByHeight(String height);
+    default Optional<List<Response>> findByHeight(String height) {
+        return repository().findByHeight(height).map(mapper()::toResponses);
+    }
 
     /**
      * Find an element by the fuel.
@@ -36,7 +57,9 @@ public interface SpacecraftService<Request extends SpacecraftRequest, Response e
      * @param fuel the weight to search.
      * @return an optional of the elements found.
      */
-    Optional<List<Response>> findByFuel(String fuel);
+    default Optional<List<Response>> findByFuel(String fuel) {
+        return repository().findByFuel(fuel).map(mapper()::toResponses);
+    }
 
     /**
      * Find an element by the state.
@@ -44,7 +67,9 @@ public interface SpacecraftService<Request extends SpacecraftRequest, Response e
      * @param state the state to search.
      * @return an optional of the elements found.
      */
-    Optional<List<Response>> findByState(String state);
+    default Optional<List<Response>> findByState(String state) {
+        return repository().findByState(state).map(mapper()::toResponses);
+    }
 
     /**
      * Find an element by the inventory id.
@@ -52,6 +77,8 @@ public interface SpacecraftService<Request extends SpacecraftRequest, Response e
      * @param inventoryId the inventory to search.
      * @return an optional of the elements found.
      */
-    Optional<List<Response>> findByInventoryId(long inventoryId);
+    default Optional<List<Response>> findByInventoryId(long inventoryId) {
+        return repository().findByInventoryId(inventoryId).map(mapper()::toResponses);
+    }
 
 }

@@ -2,6 +2,7 @@ package com.alnicode.spaceships.domain.service;
 
 import com.alnicode.spaceships.domain.dto.manned.MannedSpaceshipRequest;
 import com.alnicode.spaceships.domain.dto.manned.MannedSpaceshipResponse;
+import com.alnicode.spaceships.persistence.entity.MannedSpaceship;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,7 +13,7 @@ import java.util.Optional;
  * @since 1.0
  * @version 1.0
  */
-public interface MannedSpaceshipService extends SpacecraftService<MannedSpaceshipRequest, MannedSpaceshipResponse> {
+public interface MannedSpaceshipService extends SpacecraftService<MannedSpaceship, MannedSpaceshipRequest, MannedSpaceshipResponse> {
 
     /**
      * Find a manned spaceship by the earth orbit.

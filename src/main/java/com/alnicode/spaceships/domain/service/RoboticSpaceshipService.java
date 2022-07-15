@@ -2,6 +2,7 @@ package com.alnicode.spaceships.domain.service;
 
 import com.alnicode.spaceships.domain.dto.robotic.RoboticSpaceshipRequest;
 import com.alnicode.spaceships.domain.dto.robotic.RoboticSpaceshipResponse;
+import com.alnicode.spaceships.persistence.entity.RoboticSpaceship;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,7 +13,7 @@ import java.util.Optional;
  * @since 1.0
  * @version 1.0
  */
-public interface RoboticSpaceshipService extends ThrustSpaceshipService<RoboticSpaceshipRequest, RoboticSpaceshipResponse> {
+public interface RoboticSpaceshipService extends ThrustSpaceshipService<RoboticSpaceship, RoboticSpaceshipRequest, RoboticSpaceshipResponse> {
 
     /**
      * Find a robotic spaceship by the speed.

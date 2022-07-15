@@ -3,8 +3,11 @@ package com.alnicode.spaceships.domain.service.impl;
 import com.alnicode.spaceships.domain.dto.manned.MannedSpaceshipRequest;
 import com.alnicode.spaceships.domain.dto.manned.MannedSpaceshipResponse;
 import com.alnicode.spaceships.domain.service.MannedSpaceshipService;
+import com.alnicode.spaceships.persistence.entity.MannedSpaceship;
+import com.alnicode.spaceships.persistence.mapper.BaseMapper;
 import com.alnicode.spaceships.persistence.mapper.MannedSpaceshipMapper;
 import com.alnicode.spaceships.persistence.repository.MannedSpaceshipRepository;
+import com.alnicode.spaceships.persistence.repository.SpacecraftRepository;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,17 +31,17 @@ public class MannedSpaceshipServiceImpl implements MannedSpaceshipService {
 
     @Override
     public MannedSpaceshipResponse create(MannedSpaceshipRequest mannedSpaceshipRequest) {
-        return mapper.toResponse(repository.save(mapper.toEntity(mannedSpaceshipRequest)));
+        return null;
     }
 
     @Override
     public List<MannedSpaceshipResponse> getAll() {
-        return mapper.toResponses(repository.findAll());
+        return null;
     }
 
     @Override
     public Optional<MannedSpaceshipResponse> get(long id) {
-        return repository.findById(id).map(mapper::toResponse);
+        return Optional.empty();
     }
 
     @Override
@@ -52,27 +55,12 @@ public class MannedSpaceshipServiceImpl implements MannedSpaceshipService {
     }
 
     @Override
-    public Optional<List<MannedSpaceshipResponse>> findByWeight(String weight) {
-        return Optional.empty();
+    public BaseMapper<MannedSpaceship, MannedSpaceshipResponse> mapper() {
+        return null;
     }
 
     @Override
-    public Optional<List<MannedSpaceshipResponse>> findByHeight(String height) {
-        return Optional.empty();
-    }
-
-    @Override
-    public Optional<List<MannedSpaceshipResponse>> findByFuel(String fuel) {
-        return Optional.empty();
-    }
-
-    @Override
-    public Optional<List<MannedSpaceshipResponse>> findByState(String state) {
-        return Optional.empty();
-    }
-
-    @Override
-    public Optional<List<MannedSpaceshipResponse>> findByInventoryId(long inventoryId) {
-        return Optional.empty();
+    public SpacecraftRepository<MannedSpaceship> repository() {
+        return null;
     }
 }
