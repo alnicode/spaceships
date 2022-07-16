@@ -44,8 +44,7 @@ public class MenuUI {
                 System.out.println("2");
                 break;
             case 3:
-                System.out.println("bye");
-                System.exit(0);
+                utilsUI.close();
                 break;
             default:
                 System.out.println("not valid");
