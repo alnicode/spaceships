@@ -1,5 +1,7 @@
 package com.alnicode.spaceships.view;
 
+import com.alnicode.spaceships.util.enums.MenuOption;
+import java.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -23,16 +25,28 @@ public class MenuUI {
         var response = 0;
 
         do {
-            response = utilsUI.numericResponse("\n" +
-                    "Welcome!\n" +
-                    "What do you want to do?\n\n" +
-                    "1. Register inventories and spaceships.\n" +
-                    "2. Search or consult inventories and spaceships.\n" +
-                    "3. Exit.\n"
-            );
+            response = utilsUI.numericResponse(menu());
 
             goTo(response);
         } while (response != 0);
+    }
+
+    /**
+     * Build the menu through enumeration and loops.
+     *
+     * @return the main menu.
+     */
+    private String menu() {
+        final var menu = new StringBuilder();
+
+        menu.append("\nWelcome!\n").append("What do you want to do?\n\n");
+
+        Arrays.stream(MenuOption.values())
+                .forEach(option -> menu.append(option.getOption())
+                        .append(". ").append(option.getMessage())
+                        .append("\n"));
+
+        return menu.toString();
     }
 
     private void goTo(int response) {
