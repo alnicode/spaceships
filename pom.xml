@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.alnicode</groupId>
 	<artifactId>spaceships</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>spaceships</name>
 	<description>Is a web application for spaceships made with Spring Boot.</description>
 	<properties>
