@@ -14,6 +14,7 @@ Is a web application for spaceships made with Spring Boot.
 * PostgreSQL
 * Spring Boot
 * Spring Data JPA
+* Spring Web
 * Mapstruct
 * Lombok
 * Swagger
