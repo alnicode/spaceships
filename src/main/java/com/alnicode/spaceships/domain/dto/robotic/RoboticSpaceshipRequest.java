@@ -19,23 +19,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class RoboticSpaceshipRequest extends ThrustSpaceshipRequest implements Image, Landing {
+public class RoboticSpaceshipRequest extends ThrustSpaceshipRequest {
 
     private double speed;
     private String speedMeasure;
     private String destinyOrbit;
     private boolean imageStatus;
-
-    @Override
-    public void sendImages() {
-        if (getState().equals(StateType.LANDED.getName())) {
-            imageStatus = ImageStatusType.ACTIVE.state();
-        }
-    }
-
-    @Override
-    public void touchDown() {
-        setState(StateType.LANDED.getName());
-    }
 
 }
