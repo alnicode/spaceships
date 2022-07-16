@@ -23,7 +23,7 @@ public class MenuUI {
         var response = 0;
 
         do {
-            response = utilsUI.numericResponse("" +
+            response = utilsUI.numericResponse("\n" +
                     "Welcome!\n" +
                     "What do you want to do?\n\n" +
                     "1. Register inventories and spaceships.\n" +
@@ -47,7 +47,7 @@ public class MenuUI {
                 utilsUI.close();
                 break;
             default:
-                System.out.println("not valid");
+                System.out.println("\nnot valid\n");
                 showMenu();
                 break;
         }
