@@ -1,7 +1,9 @@
 package com.alnicode.spaceships.domain.dto.inventory;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 /**
  * The {@code Inventory} request model dto.
@@ -10,10 +12,11 @@ import lombok.RequiredArgsConstructor;
  * @since 1.0
  * @version 1.0
  */
-@RequiredArgsConstructor
+@NoArgsConstructor
+@Setter
 @Getter
 public class InventoryRequest {
 
-    private final String name;
+    private String name;
 
 }

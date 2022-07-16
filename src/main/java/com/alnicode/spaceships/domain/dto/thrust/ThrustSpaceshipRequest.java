@@ -2,6 +2,8 @@ package com.alnicode.spaceships.domain.dto.thrust;
 
 import com.alnicode.spaceships.domain.dto.spacecraft.SpacecraftRequest;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  * The {@code ThrustSpaceship} request model dto.
@@ -10,18 +12,12 @@ import lombok.Getter;
  * @since 1.0
  * @version 1.0
  */
+@NoArgsConstructor
+@Setter
 @Getter
 public class ThrustSpaceshipRequest extends SpacecraftRequest {
 
-    private final double thrust;
-    private final String thrustMeasure;
-
-    public ThrustSpaceshipRequest(final double weight, final String weightMeasure, final int height, final String heightMeasure,
-                                  final String mission, final String fuel, final double thrust, final String thrustMeasure,
-                                  final long inventoryId, final String name) {
-        super(name, weight, weightMeasure, height, heightMeasure, mission, fuel, inventoryId);
-        this.thrust = thrust;
-        this.thrustMeasure = thrustMeasure;
-    }
+    private double thrust;
+    private String thrustMeasure;
 
 }

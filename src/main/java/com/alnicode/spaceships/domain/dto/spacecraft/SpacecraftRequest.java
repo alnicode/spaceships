@@ -1,7 +1,7 @@
 package com.alnicode.spaceships.domain.dto.spacecraft;
 
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
@@ -11,18 +11,19 @@ import lombok.Setter;
  * @since 1.0
  * @version 1.0
  */
-@RequiredArgsConstructor
+@NoArgsConstructor
+@Setter
 @Getter
 public abstract class SpacecraftRequest {
 
-    private final String name;
-    private final double weight;
-    private final String weightMeasure;
-    private final int height;
-    private final String heightMeasure;
-    private final String mission;
-    private final String fuel;
-    private @Setter String state;
-    private final long inventoryId;
+    private String name;
+    private double weight;
+    private String weightMeasure;
+    private int height;
+    private String heightMeasure;
+    private String mission;
+    private String fuel;
+    private String state;
+    private long inventoryId;
 
 }
