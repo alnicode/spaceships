@@ -38,13 +38,13 @@ public interface RoboticSpaceshipService extends ThrustSpaceshipService<RoboticS
      *
      * @param request the spaceship.
      */
-    void touchDown(RoboticSpaceshipRequest request);
+    void touchDown(long id);
 
     /**
      * Makes the spaceship send the images.
      *
      * @param request the spaceship.
      */
-    void sendImages(RoboticSpaceshipRequest request);
+    void sendImages(long id);
 
 }
