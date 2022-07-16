@@ -1,6 +1,8 @@
 package com.alnicode.spaceships.view;
 
 import java.util.Scanner;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,10 +12,11 @@ import org.springframework.stereotype.Component;
  * @since 1.0
  * @version 1.0
  */
+@RequiredArgsConstructor
 @Component
 public class UtilsUI {
 
-    private final Scanner sc = new Scanner(System.in);
+    private final Scanner sc;
 
     /**
      * Show the message and get the response.
