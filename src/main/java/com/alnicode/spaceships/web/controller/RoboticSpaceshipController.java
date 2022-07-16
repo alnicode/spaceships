@@ -70,24 +70,24 @@ public class RoboticSpaceshipController extends ThrustSpaceshipController<Roboti
     /**
      * The spaceship lands.
      *
-     * @param request the request to land.
+     * @param id the spaceship id to land.
      * @return an empty response entity.
      */
-    @PostMapping("/touch-down")
-    public ResponseEntity<Object> touchDown(@RequestBody RoboticSpaceshipRequest request) {
-        service.touchDown(request);
+    @PostMapping("/{id}/touch-down")
+    public ResponseEntity<Object> touchDown(@PathVariable("id") long id) {
+        service.touchDown(id);
         return ResponseEntity.noContent().build();
     }
 
     /**
      * The spaceship send images.
      *
-     * @param request the request for send images.
+     * @param id the spaceship id for send the images.
      * @return an empty response entity.
      */
-    @PostMapping("/send-images")
-    public ResponseEntity<Object> sendImages(@RequestBody RoboticSpaceshipRequest request) {
-        service.sendImages(request);
+    @PostMapping("/{id}/send-images")
+    public ResponseEntity<Object> sendImages(@PathVariable("id") long id) {
+        service.sendImages(id);
         return ResponseEntity.noContent().build();
     }
 
