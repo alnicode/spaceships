@@ -49,6 +49,7 @@ public class MenuUI {
                 break;
             default:
                 System.out.println("not valid");
+                showMenu();
                 break;
         }
     }
