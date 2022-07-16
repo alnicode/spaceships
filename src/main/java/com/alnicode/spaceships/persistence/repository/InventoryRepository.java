@@ -26,7 +26,7 @@ public interface InventoryRepository extends JpaRepository<Inventory, Long> {
     /**
      * Find an inventory by the spacecraft id.
      *
-     * @param id the spacecraft id to search.
+     * @param spacecraftId the spacecraft id to search.
      * @return an optional of the inventory found.
      */
     Optional<Inventory> findBySpacecraftsId(long spacecraftId);
