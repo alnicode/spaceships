@@ -35,6 +35,10 @@ And you can get the list.
 
 ![6](https://user-images.githubusercontent.com/81927187/179357259-14d74923-be72-4bfd-ae7e-5cf8a4ade9b9.png)
 
+## Inventory
+
+My inventory is called "Sofka Inventory" and have ID #3.
+
 ## How I developed it?
 
 * Java 11
@@ -49,4 +53,4 @@ And you can get the list.
 * Heroku
 
 ## Author
-me :D
+alnicode
