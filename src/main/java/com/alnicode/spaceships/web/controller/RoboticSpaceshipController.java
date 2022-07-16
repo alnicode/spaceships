@@ -4,7 +4,7 @@ import com.alnicode.spaceships.domain.dto.robotic.RoboticSpaceshipRequest;
 import com.alnicode.spaceships.domain.dto.robotic.RoboticSpaceshipResponse;
 import com.alnicode.spaceships.domain.service.RoboticSpaceshipService;
 import com.alnicode.spaceships.domain.service.ThrustSpaceshipService;
-import com.alnicode.spaceships.persistence.entity.RoboticSpaceship;
+import com.alnicode.spaceships.persistence.entity.robotic.RoboticSpaceship;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

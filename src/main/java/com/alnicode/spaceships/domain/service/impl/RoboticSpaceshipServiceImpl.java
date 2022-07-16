@@ -3,7 +3,7 @@ package com.alnicode.spaceships.domain.service.impl;
 import com.alnicode.spaceships.domain.dto.robotic.RoboticSpaceshipRequest;
 import com.alnicode.spaceships.domain.dto.robotic.RoboticSpaceshipResponse;
 import com.alnicode.spaceships.domain.service.RoboticSpaceshipService;
-import com.alnicode.spaceships.persistence.entity.RoboticSpaceship;
+import com.alnicode.spaceships.persistence.entity.robotic.RoboticSpaceship;
 import com.alnicode.spaceships.persistence.mapper.BaseMapper;
 import com.alnicode.spaceships.persistence.mapper.RoboticSpaceshipMapper;
 import com.alnicode.spaceships.persistence.repository.RoboticSpaceshipRepository;

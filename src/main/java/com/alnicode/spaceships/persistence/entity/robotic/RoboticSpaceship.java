@@ -1,5 +1,6 @@
-package com.alnicode.spaceships.persistence.entity;
+package com.alnicode.spaceships.persistence.entity.robotic;
 
+import com.alnicode.spaceships.persistence.entity.ThrustSpaceship;
 import com.alnicode.spaceships.util.constants.RoboticSpaceshipConstants;
 import javax.persistence.Column;
 import javax.persistence.Entity;

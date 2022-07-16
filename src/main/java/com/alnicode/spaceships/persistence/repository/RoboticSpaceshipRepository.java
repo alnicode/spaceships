@@ -1,6 +1,6 @@
 package com.alnicode.spaceships.persistence.repository;
 
-import com.alnicode.spaceships.persistence.entity.RoboticSpaceship;
+import com.alnicode.spaceships.persistence.entity.robotic.RoboticSpaceship;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.stereotype.Repository;

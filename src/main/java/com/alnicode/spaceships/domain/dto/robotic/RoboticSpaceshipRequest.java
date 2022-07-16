@@ -1,6 +1,8 @@
 package com.alnicode.spaceships.domain.dto.robotic;
 
 import com.alnicode.spaceships.domain.dto.thrust.ThrustSpaceshipRequest;
+import com.alnicode.spaceships.persistence.entity.robotic.Image;
+import com.alnicode.spaceships.persistence.entity.robotic.Landing;
 import com.alnicode.spaceships.util.enums.ImageStatusType;
 import com.alnicode.spaceships.util.enums.StateType;
 import lombok.Getter;
