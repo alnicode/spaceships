@@ -8,6 +8,7 @@ Is a web application for spaceships made with Spring Boot.
 
 * Java 11
 * Maven
+* PostgreSQL
 * Spring Boot
 * Spring Data JPA
 * Mapstruct
