@@ -13,6 +13,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class UtilsUI {
 
+    private final Scanner sc = new Scanner(System.in);
+
     /**
      * Show the message and get the response.
      *
@@ -20,14 +22,8 @@ public class UtilsUI {
      * @return the user response.
      */
     public String response(String message) {
-        final var sc = new Scanner(System.in);
-
         System.out.print(message + "\n -> ");
-        final var response = sc.nextLine();
-
-        sc.close();
-
-        return response;
+        return sc.nextLine();
     }
 
     /**
@@ -42,6 +38,15 @@ public class UtilsUI {
         } catch (NumberFormatException ex) {
             return 0;
         }
+    }
+
+    /**
+     * Close the scanner and the application.
+     */
+    public void close() {
+        System.out.println("\nBye bye\n");
+        sc.close();
+        System.exit(0);
     }
 
 }
