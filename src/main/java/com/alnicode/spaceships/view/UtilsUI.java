@@ -1,9 +1,6 @@
 package com.alnicode.spaceships.view;
 
 import java.util.Scanner;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 /**
  * The utils for UI.
@@ -12,11 +9,13 @@ import org.springframework.stereotype.Component;
  * @since 1.0
  * @version 1.0
  */
-@RequiredArgsConstructor
-@Component
 public class UtilsUI {
 
-    private final Scanner sc;
+    private static final Scanner sc;
+
+    static {
+        sc = new Scanner(System.in);
+    }
 
     /**
      * Show the message and get the response.
@@ -24,7 +23,7 @@ public class UtilsUI {
      * @param message the message to show.
      * @return the user response.
      */
-    public String response(String message) {
+    public static String response(String message) {
         System.out.print(message + "\n -> ");
         return sc.nextLine();
     }
@@ -35,7 +34,7 @@ public class UtilsUI {
      * @param message the message to show.
      * @return an integer as a response.
      */
-    public int numericResponse(String message) {
+    public static int numericResponse(String message) {
         try {
             return Integer.parseInt(response(message));
         } catch (NumberFormatException ex) {
@@ -46,7 +45,7 @@ public class UtilsUI {
     /**
      * Close the scanner and the application.
      */
-    public void close() {
+    public static void close() {
         System.out.println("\nBye bye\n");
         sc.close();
         System.exit(0);
