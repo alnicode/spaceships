@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @since 1.0
  * @version 1.0
  */
-public abstract class GenericController<Request, Response> {
+public abstract class GenericRest<Request, Response> {
 
     /**
      * Set the service to use.

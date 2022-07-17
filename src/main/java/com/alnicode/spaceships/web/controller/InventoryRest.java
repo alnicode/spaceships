@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/inventories")
-public class InventoryController extends GenericController<InventoryRequest, InventoryResponse> {
+public class InventoryRest extends GenericRest<InventoryRequest, InventoryResponse> {
 
     @Autowired
     private InventoryService service;

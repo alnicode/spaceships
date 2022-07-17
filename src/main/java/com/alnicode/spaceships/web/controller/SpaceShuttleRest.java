@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/space-shuttles")
-public class SpaceShuttleController extends ThrustSpaceshipController<SpaceShuttle, SpaceShuttleRequest, SpaceShuttleResponse> {
+public class SpaceShuttleRest extends ThrustSpaceshipRest<SpaceShuttle, SpaceShuttleRequest, SpaceShuttleResponse> {
 
     @Autowired
     private SpaceShuttleService service;

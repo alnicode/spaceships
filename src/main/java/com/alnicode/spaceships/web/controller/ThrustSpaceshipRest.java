@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @since 1.0
  * @version 1.0
  */
-public abstract class ThrustSpaceshipController<Entity extends ThrustSpaceship, Request extends ThrustSpaceshipRequest,
-        Response extends ThrustSpaceshipResponse> extends SpacecraftController<Entity, Request, Response> {
+public abstract class ThrustSpaceshipRest<Entity extends ThrustSpaceship, Request extends ThrustSpaceshipRequest,
+        Response extends ThrustSpaceshipResponse> extends SpacecraftRest<Entity, Request, Response> {
 
     protected abstract ThrustSpaceshipService<Entity, Request, Response> thrustService();
 

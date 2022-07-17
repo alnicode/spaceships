@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/robotic")
-public class RoboticSpaceshipController extends ThrustSpaceshipController<RoboticSpaceship, RoboticSpaceshipRequest, RoboticSpaceshipResponse> {
+public class RoboticSpaceshipRest extends ThrustSpaceshipRest<RoboticSpaceship, RoboticSpaceshipRequest, RoboticSpaceshipResponse> {
 
     @Autowired
     private RoboticSpaceshipService service;

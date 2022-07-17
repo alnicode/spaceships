@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @since 1.0
  * @version 1.0
  */
-public abstract class SpacecraftController<Entity extends Spacecraft, Request extends SpacecraftRequest,
-        Response extends SpacecraftResponse> extends GenericController<Request, Response> {
+public abstract class SpacecraftRest<Entity extends Spacecraft, Request extends SpacecraftRequest,
+        Response extends SpacecraftResponse> extends GenericRest<Request, Response> {
 
     @Autowired
     private InventoryService inventoryService;

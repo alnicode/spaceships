@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/manned")
-public class MannedSpaceshipController extends SpacecraftController<MannedSpaceship, MannedSpaceshipRequest, MannedSpaceshipResponse> {
+public class MannedSpaceshipRest extends SpacecraftRest<MannedSpaceship, MannedSpaceshipRequest, MannedSpaceshipResponse> {
 
     @Autowired
     private MannedSpaceshipService service;
