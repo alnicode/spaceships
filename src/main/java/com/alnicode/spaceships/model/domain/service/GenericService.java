@@ -1,5 +1,6 @@
 package com.alnicode.spaceships.model.domain.service;
 
+import com.alnicode.spaceships.exceptions.ItemAlreadyExistsException;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,7 +16,7 @@ public interface GenericService<Request, Response> {
      * @param request the request to be saved.
      * @return the response saved.
      */
-    Response create(Request request);
+    Response create(Request request) throws ItemAlreadyExistsException;
 
     /**
      * Get all the registered elements.

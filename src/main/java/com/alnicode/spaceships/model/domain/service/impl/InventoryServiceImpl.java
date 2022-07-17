@@ -1,5 +1,6 @@
 package com.alnicode.spaceships.model.domain.service.impl;
 
+import com.alnicode.spaceships.exceptions.ItemAlreadyExistsException;
 import com.alnicode.spaceships.model.domain.dto.inventory.InventoryRequest;
 import com.alnicode.spaceships.model.domain.service.InventoryService;
 import com.alnicode.spaceships.model.domain.dto.inventory.InventoryResponse;
@@ -27,7 +28,13 @@ public class InventoryServiceImpl implements InventoryService {
     private InventoryMapper mapper;
 
     @Override
-    public InventoryResponse create(InventoryRequest inventoryRequest) {
+    public InventoryResponse create(InventoryRequest inventoryRequest) throws ItemAlreadyExistsException {
+        final var toFind = repository.findByName(inventoryRequest.getName());
+
+        if (toFind.isPresent()) {
+            throw new ItemAlreadyExistsException("The inventory already exists: " + inventoryRequest.getName());
+        }
+
         return mapper.toResponse(repository.save(mapper.toEntity(inventoryRequest)));
     }
 

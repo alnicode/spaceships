@@ -1,5 +1,6 @@
 package com.alnicode.spaceships.model.domain.service.impl;
 
+import com.alnicode.spaceships.exceptions.ItemAlreadyExistsException;
 import com.alnicode.spaceships.model.domain.service.SpaceShuttleService;
 import com.alnicode.spaceships.model.domain.dto.shuttle.SpaceShuttleRequest;
 import com.alnicode.spaceships.model.domain.dto.shuttle.SpaceShuttleResponse;
@@ -30,7 +31,13 @@ public class SpaceShuttleServiceImpl implements SpaceShuttleService {
     private SpaceShuttleMapper mapper;
 
     @Override
-    public SpaceShuttleResponse create(SpaceShuttleRequest spaceShuttleRequest) {
+    public SpaceShuttleResponse create(SpaceShuttleRequest spaceShuttleRequest) throws ItemAlreadyExistsException {
+        final var toFind = repository.findByName(spaceShuttleRequest.getName());
+
+        if (toFind.isPresent()) {
+            throw new ItemAlreadyExistsException("The Space Shuttle already exists: " + spaceShuttleRequest.getName());
+        }
+
         return mapper.toResponse(repository.save(mapper.toEntity(spaceShuttleRequest)));
     }
 

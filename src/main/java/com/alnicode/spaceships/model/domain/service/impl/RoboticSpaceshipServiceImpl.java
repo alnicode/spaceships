@@ -1,5 +1,6 @@
 package com.alnicode.spaceships.model.domain.service.impl;
 
+import com.alnicode.spaceships.exceptions.ItemAlreadyExistsException;
 import com.alnicode.spaceships.model.domain.service.RoboticSpaceshipService;
 import com.alnicode.spaceships.model.domain.dto.robotic.RoboticSpaceshipRequest;
 import com.alnicode.spaceships.model.domain.dto.robotic.RoboticSpaceshipResponse;
@@ -30,7 +31,13 @@ public class RoboticSpaceshipServiceImpl implements RoboticSpaceshipService {
     private RoboticSpaceshipMapper mapper;
 
     @Override
-    public RoboticSpaceshipResponse create(RoboticSpaceshipRequest roboticSpaceshipRequest) {
+    public RoboticSpaceshipResponse create(RoboticSpaceshipRequest roboticSpaceshipRequest) throws ItemAlreadyExistsException {
+        final var toFind = repository.findByName(roboticSpaceshipRequest.getName());
+
+        if (toFind.isPresent()) {
+            throw new ItemAlreadyExistsException("The Robotic Spaceship already exists: " + roboticSpaceshipRequest.getName());
+        }
+
         return mapper.toResponse(repository.save(mapper.toEntity(roboticSpaceshipRequest)));
     }
 

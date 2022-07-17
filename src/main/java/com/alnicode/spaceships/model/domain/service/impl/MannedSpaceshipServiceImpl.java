@@ -1,5 +1,6 @@
 package com.alnicode.spaceships.model.domain.service.impl;
 
+import com.alnicode.spaceships.exceptions.ItemAlreadyExistsException;
 import com.alnicode.spaceships.model.domain.service.MannedSpaceshipService;
 import com.alnicode.spaceships.model.domain.dto.manned.MannedSpaceshipRequest;
 import com.alnicode.spaceships.model.domain.dto.manned.MannedSpaceshipResponse;
@@ -30,7 +31,13 @@ public class MannedSpaceshipServiceImpl implements MannedSpaceshipService {
     private MannedSpaceshipMapper mapper;
 
     @Override
-    public MannedSpaceshipResponse create(MannedSpaceshipRequest mannedSpaceshipRequest) {
+    public MannedSpaceshipResponse create(MannedSpaceshipRequest mannedSpaceshipRequest) throws ItemAlreadyExistsException {
+        final var toFind = repository.findByName(mannedSpaceshipRequest.getName());
+
+        if (toFind.isPresent()) {
+            throw new ItemAlreadyExistsException("The Manned Spaceship already exists: " + mannedSpaceshipRequest.getName());
+        }
+
         return mapper.toResponse(repository.save(mapper.toEntity(mannedSpaceshipRequest)));
     }
 

@@ -1,5 +1,6 @@
 package com.alnicode.spaceships.web.controller;
 
+import com.alnicode.spaceships.exceptions.ItemAlreadyExistsException;
 import com.alnicode.spaceships.model.domain.service.GenericService;
 import java.util.List;
 import org.springframework.http.HttpStatus;
@@ -32,7 +33,7 @@ public abstract class GenericRest<Request, Response> {
      * @return a response entity of the registered element.
      */
     @PostMapping
-    public ResponseEntity<Response> register(@RequestBody Request request) {
+    public ResponseEntity<Response> register(@RequestBody Request request) throws ItemAlreadyExistsException {
         return ResponseEntity.status(HttpStatus.CREATED).body(service().create(request));
     }
 
