@@ -51,7 +51,7 @@ public class RegisterUI {
      */
     private static void goTo(int response) {
         if (response == RegisterEnum.INVENTORY.getOption()) {
-            System.out.println("inventory");
+            InventoryUI.register();
         } else if (response == RegisterEnum.SPACECRAFT.getOption()) {
             SpacecraftUI.showRegisterMenu();
         } else if (response == RegisterEnum.BACK.getOption()) {
