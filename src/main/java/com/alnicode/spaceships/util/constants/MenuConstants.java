@@ -9,4 +9,6 @@ package com.alnicode.spaceships.util.constants;
  */
 public interface MenuConstants {
     int DEFAULT_RESPONSE = -1;
+    String NOT_VALID = "\nNot valid! Try again";
+    String CLOSE_MESSAGE = "\nSee ya!\n";
 }

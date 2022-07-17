@@ -59,7 +59,7 @@ public class RegisterUI {
         } else if (response == RegisterEnum.EXIT.getOption()) {
             UtilsUI.close();
         } else {
-            System.out.println("\nNot valid.");
+            System.out.println(MenuConstants.NOT_VALID);
             showMenu();
         }
     }

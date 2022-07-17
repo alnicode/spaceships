@@ -57,7 +57,7 @@ public class MenuUI {
         } else if (response == MenuEnum.EXIT.getOption()) {
             UtilsUI.close();
         } else {
-            System.out.println("\nNot valid");
+            System.out.println(MenuConstants.NOT_VALID);
             showMenu();
         }
     }

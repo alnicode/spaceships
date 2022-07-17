@@ -58,7 +58,7 @@ public class SpacecraftUI {
         } else if (response == SpacecraftEnum.EXIT.getOption()) {
             UtilsUI.close();
         } else {
-            System.out.println("\ninvalid\n");
+            System.out.println(MenuConstants.NOT_VALID);
             showMenu();
         }
     }

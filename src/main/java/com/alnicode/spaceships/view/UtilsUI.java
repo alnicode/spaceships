@@ -47,7 +47,7 @@ public class UtilsUI {
      * Close the scanner and the application.
      */
     public static void close() {
-        System.out.println("\nBye bye\n");
+        System.out.println(MenuConstants.CLOSE_MESSAGE);
         sc.close();
         System.exit(0);
     }
