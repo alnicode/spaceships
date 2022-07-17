@@ -50,7 +50,7 @@ public class RegisterUI {
                 System.out.println("inventory");
                 break;
             case 2:
-                System.out.println("spacecraft");
+                SpacecraftUI.showMenu();
                 break;
             case 3:
                 MenuUI.showMenu();
