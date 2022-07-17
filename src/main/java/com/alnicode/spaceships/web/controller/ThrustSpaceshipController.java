@@ -1,10 +1,10 @@
 package com.alnicode.spaceships.web.controller;
 
-import com.alnicode.spaceships.domain.dto.thrust.ThrustSpaceshipRequest;
-import com.alnicode.spaceships.domain.dto.thrust.ThrustSpaceshipResponse;
-import com.alnicode.spaceships.domain.service.SpacecraftService;
-import com.alnicode.spaceships.domain.service.ThrustSpaceshipService;
-import com.alnicode.spaceships.persistence.entity.ThrustSpaceship;
+import com.alnicode.spaceships.model.domain.dto.thrust.ThrustSpaceshipRequest;
+import com.alnicode.spaceships.model.domain.dto.thrust.ThrustSpaceshipResponse;
+import com.alnicode.spaceships.model.domain.service.SpacecraftService;
+import com.alnicode.spaceships.model.domain.service.ThrustSpaceshipService;
+import com.alnicode.spaceships.model.persistence.entity.ThrustSpaceship;
 import java.util.List;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

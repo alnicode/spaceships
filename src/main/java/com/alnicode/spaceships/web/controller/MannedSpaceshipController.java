@@ -1,10 +1,10 @@
 package com.alnicode.spaceships.web.controller;
 
-import com.alnicode.spaceships.domain.dto.manned.MannedSpaceshipRequest;
-import com.alnicode.spaceships.domain.dto.manned.MannedSpaceshipResponse;
-import com.alnicode.spaceships.domain.service.MannedSpaceshipService;
-import com.alnicode.spaceships.domain.service.SpacecraftService;
-import com.alnicode.spaceships.persistence.entity.MannedSpaceship;
+import com.alnicode.spaceships.model.domain.dto.manned.MannedSpaceshipRequest;
+import com.alnicode.spaceships.model.domain.dto.manned.MannedSpaceshipResponse;
+import com.alnicode.spaceships.model.domain.service.MannedSpaceshipService;
+import com.alnicode.spaceships.model.domain.service.SpacecraftService;
+import com.alnicode.spaceships.model.persistence.entity.MannedSpaceship;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

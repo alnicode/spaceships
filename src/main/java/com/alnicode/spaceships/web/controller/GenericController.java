@@ -1,6 +1,6 @@
 package com.alnicode.spaceships.web.controller;
 
-import com.alnicode.spaceships.domain.service.GenericService;
+import com.alnicode.spaceships.model.domain.service.GenericService;
 import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

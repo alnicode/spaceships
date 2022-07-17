@@ -1,12 +1,12 @@
 package com.alnicode.spaceships.web.controller;
 
-import com.alnicode.spaceships.domain.dto.inventory.InventoryResponse;
-import com.alnicode.spaceships.domain.dto.spacecraft.SpacecraftRequest;
-import com.alnicode.spaceships.domain.dto.spacecraft.SpacecraftResponse;
-import com.alnicode.spaceships.domain.service.GenericService;
-import com.alnicode.spaceships.domain.service.InventoryService;
-import com.alnicode.spaceships.domain.service.SpacecraftService;
-import com.alnicode.spaceships.persistence.entity.Spacecraft;
+import com.alnicode.spaceships.model.domain.dto.inventory.InventoryResponse;
+import com.alnicode.spaceships.model.domain.dto.spacecraft.SpacecraftRequest;
+import com.alnicode.spaceships.model.domain.dto.spacecraft.SpacecraftResponse;
+import com.alnicode.spaceships.model.domain.service.GenericService;
+import com.alnicode.spaceships.model.domain.service.InventoryService;
+import com.alnicode.spaceships.model.domain.service.SpacecraftService;
+import com.alnicode.spaceships.model.persistence.entity.Spacecraft;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

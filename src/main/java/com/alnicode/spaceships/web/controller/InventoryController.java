@@ -1,9 +1,9 @@
 package com.alnicode.spaceships.web.controller;
 
-import com.alnicode.spaceships.domain.dto.inventory.InventoryRequest;
-import com.alnicode.spaceships.domain.dto.inventory.InventoryResponse;
-import com.alnicode.spaceships.domain.service.GenericService;
-import com.alnicode.spaceships.domain.service.InventoryService;
+import com.alnicode.spaceships.model.domain.dto.inventory.InventoryRequest;
+import com.alnicode.spaceships.model.domain.dto.inventory.InventoryResponse;
+import com.alnicode.spaceships.model.domain.service.GenericService;
+import com.alnicode.spaceships.model.domain.service.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
