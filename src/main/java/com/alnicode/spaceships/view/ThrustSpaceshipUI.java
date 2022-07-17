@@ -14,22 +14,22 @@ import java.util.Arrays;
 public class ThrustSpaceshipUI {
 
     /**
-     * Show the thrust spaceship menu.
+     * Show the thrust spaceship register menu.
      */
-    public static void showMenu() {
+    public static void showRegisterMenu() {
         var response = MenuConstants.DEFAULT_RESPONSE;
 
         do {
-            response = UtilsUI.numericResponse(menu());
+            response = UtilsUI.numericResponse(registerMenu());
 
-            goTo(response);
+            registerGoTo(response);
         } while (response != MenuConstants.DEFAULT_RESPONSE);
     }
 
     /**
-     * @return the menu.
+     * @return the register menu.
      */
-    private static String menu() {
+    private static String registerMenu() {
         final var menu = new StringBuilder();
 
         menu.append("\n# ----- THRUST SPACESHIP MAIN MENU ----- #\n\n");
@@ -45,22 +45,22 @@ public class ThrustSpaceshipUI {
     }
 
     /**
-     * Go to the next or previous menu.
+     * Go to the next or previous register menu.
      *
      * @param response the selected option.
      */
-    private static void goTo(int response) {
+    private static void registerGoTo(int response) {
         if (response == RegisterThrustSpaceshipEnum.ROBOTIC.getOption()) {
             System.out.println("robotic");
         } else if (response == RegisterThrustSpaceshipEnum.SHUTTLE.getOption()) {
             System.out.println("shuttle");
         } else if (response == RegisterThrustSpaceshipEnum.BACK.getOption()) {
-            SpacecraftUI.showMenu();
+            SpacecraftUI.showRegisterMenu();
         } else if (response == RegisterThrustSpaceshipEnum.EXIT.getOption()) {
             UtilsUI.close();
         } else {
             System.out.println(MenuConstants.NOT_VALID);
-            showMenu();
+            showRegisterMenu();
         }
     }
 

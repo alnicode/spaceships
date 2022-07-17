@@ -53,7 +53,7 @@ public class RegisterUI {
         if (response == RegisterEnum.INVENTORY.getOption()) {
             System.out.println("inventory");
         } else if (response == RegisterEnum.SPACECRAFT.getOption()) {
-            SpacecraftUI.showMenu();
+            SpacecraftUI.showRegisterMenu();
         } else if (response == RegisterEnum.BACK.getOption()) {
             MenuUI.showMenu();
         } else if (response == RegisterEnum.EXIT.getOption()) {

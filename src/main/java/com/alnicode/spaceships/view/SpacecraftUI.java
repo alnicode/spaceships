@@ -14,22 +14,22 @@ import java.util.Arrays;
 public class SpacecraftUI {
 
     /**
-     * Show the spacecraft main menu options.
+     * Show the spacecraft main register menu options.
      */
-    public static void showMenu() {
+    public static void showRegisterMenu() {
         var response = MenuConstants.DEFAULT_RESPONSE;
 
         do {
-            response = UtilsUI.numericResponse(menu());
+            response = UtilsUI.numericResponse(registerMenu());
 
-            goTo(response);
+            registerGoTo(response);
         } while (response != MenuConstants.DEFAULT_RESPONSE);
     }
 
     /**
-     * @return the available options.
+     * @return the available register options.
      */
-    private static String menu() {
+    private static String registerMenu() {
         final var menu = new StringBuilder();
 
         menu.append("\n# ----- SPACECRAFT MAIN MENU ----- #\n\n").append("What type of spacecraft do you want to register?\n\n");
@@ -44,22 +44,22 @@ public class SpacecraftUI {
     }
 
     /**
-     * Go to the next or previous menu.
+     * Go to the next or previous register menu.
      *
      * @param response the selected option.
      */
-    private static void goTo(int response) {
+    private static void registerGoTo(int response) {
         if (response == RegisterSpacecraftEnum.MANNED.getOption()) {
             System.out.println("manned spaceship");
         } else if (response == RegisterSpacecraftEnum.THRUST.getOption()) {
-            ThrustSpaceshipUI.showMenu();
+            ThrustSpaceshipUI.showRegisterMenu();
         } else if (response == RegisterSpacecraftEnum.BACK.getOption()) {
             RegisterUI.showMenu();
         } else if (response == RegisterSpacecraftEnum.EXIT.getOption()) {
             UtilsUI.close();
         } else {
             System.out.println(MenuConstants.NOT_VALID);
-            showMenu();
+            showRegisterMenu();
         }
     }
 
