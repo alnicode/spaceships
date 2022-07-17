@@ -14,14 +14,6 @@ import java.util.Optional;
 public interface InventoryService extends GenericService<InventoryRequest, InventoryResponse> {
 
     /**
-     * Find an inventory by the name.
-     *
-     * @param name the name to search.
-     * @return an optional of the inventory found.
-     */
-    Optional<InventoryResponse> getByName(String name);
-
-    /**
      * Find an inventory by the spacecraft id.
      *
      * @param spacecraftId the spacecraft id to search.

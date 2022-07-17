@@ -25,11 +25,19 @@ public interface GenericService<Request, Response> {
     List<Response> getAll();
 
     /**
-     * Get a element by the id.
+     * Get an element by the id.
      *
      * @param id the id to search.
      * @return an optional of the element found.
      */
     Optional<Response> get(long id);
+
+    /**
+     * Find an element by the name.
+     *
+     * @param name the name to search.
+     * @return an optional of the element found.
+     */
+    Optional<Response> getByName(String name);
 
 }
