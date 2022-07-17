@@ -14,7 +14,9 @@ import lombok.RequiredArgsConstructor;
 @Getter
 public enum SpacecraftEnum {
     MANNED(1, "Manned Spaceship."),
-    THRUST(2, "Thrust Spaceship.");
+    THRUST(2, "Thrust Spaceship."),
+    BACK(3, "Back."),
+    EXIT(0, "Exit");
 
     private final int option;
     private final String message;
