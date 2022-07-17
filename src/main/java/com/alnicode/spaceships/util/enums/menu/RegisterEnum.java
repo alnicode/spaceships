@@ -1,10 +1,10 @@
-package com.alnicode.spaceships.util.enums;
+package com.alnicode.spaceships.util.enums.menu;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 /**
- * The thrust spaceship menu options.
+ * The register UI options.
  *
  * @author Alben Bustamante
  * @since 1.0
@@ -12,9 +12,9 @@ import lombok.RequiredArgsConstructor;
  */
 @RequiredArgsConstructor
 @Getter
-public enum ThrustSpaceshipEnum {
-    ROBOTIC(1, "Robotic Spaceship."),
-    SHUTTLE(2, "Space Shuttle."),
+public enum RegisterEnum {
+    INVENTORY(1, "Inventory."),
+    SPACECRAFT(2, "Spacecraft."),
     BACK(3, "Back."),
     EXIT(0, "Exit.");
 

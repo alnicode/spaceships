@@ -1,7 +1,7 @@
 package com.alnicode.spaceships.view;
 
 import com.alnicode.spaceships.util.constants.MenuConstants;
-import com.alnicode.spaceships.util.enums.RegisterEnum;
+import com.alnicode.spaceships.util.enums.menu.RegisterEnum;
 import java.util.Arrays;
 
 /**

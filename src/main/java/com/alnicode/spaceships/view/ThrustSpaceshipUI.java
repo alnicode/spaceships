@@ -1,7 +1,7 @@
 package com.alnicode.spaceships.view;
 
 import com.alnicode.spaceships.util.constants.MenuConstants;
-import com.alnicode.spaceships.util.enums.ThrustSpaceshipEnum;
+import com.alnicode.spaceships.util.enums.menu.RegisterThrustSpaceshipEnum;
 import java.util.Arrays;
 
 /**
@@ -35,7 +35,7 @@ public class ThrustSpaceshipUI {
         menu.append("\n# ----- THRUST SPACESHIP MAIN MENU ----- #\n\n");
         menu.append("What type of thrust spaceship do you want to register?\n\n");
 
-        Arrays.stream(ThrustSpaceshipEnum.values())
+        Arrays.stream(RegisterThrustSpaceshipEnum.values())
                 .forEach(option -> menu.append(option.getOption())
                         .append(". ")
                         .append(option.getMessage())
@@ -50,13 +50,13 @@ public class ThrustSpaceshipUI {
      * @param response the selected option.
      */
     private static void goTo(int response) {
-        if (response == ThrustSpaceshipEnum.ROBOTIC.getOption()) {
+        if (response == RegisterThrustSpaceshipEnum.ROBOTIC.getOption()) {
             System.out.println("robotic");
-        } else if (response == ThrustSpaceshipEnum.SHUTTLE.getOption()) {
+        } else if (response == RegisterThrustSpaceshipEnum.SHUTTLE.getOption()) {
             System.out.println("shuttle");
-        } else if (response == ThrustSpaceshipEnum.BACK.getOption()) {
+        } else if (response == RegisterThrustSpaceshipEnum.BACK.getOption()) {
             SpacecraftUI.showMenu();
-        } else if (response == ThrustSpaceshipEnum.EXIT.getOption()) {
+        } else if (response == RegisterThrustSpaceshipEnum.EXIT.getOption()) {
             UtilsUI.close();
         } else {
             System.out.println(MenuConstants.NOT_VALID);

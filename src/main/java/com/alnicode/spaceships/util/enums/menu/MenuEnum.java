@@ -1,4 +1,4 @@
-package com.alnicode.spaceships.util.enums;
+package com.alnicode.spaceships.util.enums.menu;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
