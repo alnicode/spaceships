@@ -1,41 +1,41 @@
 package com.alnicode.spaceships.view;
 
-import com.alnicode.spaceships.util.enums.MenuOption;
+import com.alnicode.spaceships.util.enums.RegisterEnum;
 import java.util.Arrays;
 
 /**
- * The main menu UI.
+ * The register UI main menu.
  *
  * @author Alben Bustamante
  * @since 1.0
  * @version 1.0
  */
-public class MenuUI {
+public class RegisterUI {
 
     /**
      * Show the main menu.
      */
     public static void showMenu() {
-        var response = 0;
+        var response = -1;
 
         do {
             response = UtilsUI.numericResponse(menu());
 
             goTo(response);
-        } while (response != 0);
+        } while (response != -1);
     }
 
     /**
-     * Build the menu through enumeration and loops.
+     * Build the register main menu through enumeration and loops.
      *
-     * @return the main menu.
+     * @return the register menu.
      */
     private static String menu() {
         final var menu = new StringBuilder();
 
-        menu.append("\nWelcome!\n").append("What do you want to do?\n\n");
+        menu.append("\n# ----- REGISTER MENU ----- #\n\n").append("What do you have to register?\n\n");
 
-        Arrays.stream(MenuOption.values())
+        Arrays.stream(RegisterEnum.values())
                 .forEach(option -> menu.append(option.getOption())
                         .append(". ").append(option.getMessage())
                         .append("\n"));
@@ -46,12 +46,15 @@ public class MenuUI {
     private static void goTo(int response) {
         switch (response) {
             case 1:
-                RegisterUI.showMenu();
+                System.out.println("inventory");
                 break;
             case 2:
-                System.out.println("2");
+                System.out.println("spacecraft");
                 break;
             case 3:
+                MenuUI.showMenu();
+                break;
+            case 0:
                 UtilsUI.close();
                 break;
             default:
