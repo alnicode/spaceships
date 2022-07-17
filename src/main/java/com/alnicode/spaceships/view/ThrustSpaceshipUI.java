@@ -1,20 +1,20 @@
 package com.alnicode.spaceships.view;
 
 import com.alnicode.spaceships.util.constants.MenuConstants;
-import com.alnicode.spaceships.util.enums.SpacecraftEnum;
+import com.alnicode.spaceships.util.enums.ThrustSpaceshipEnum;
 import java.util.Arrays;
 
 /**
- * The spacecraft main menu.
+ * The thrust spaceship menu.
  *
  * @author Alben Bustamante
  * @since 1.0
  * @version 1.0
  */
-public class SpacecraftUI {
+public class ThrustSpaceshipUI {
 
     /**
-     * Show the spacecraft main menu options.
+     * Show the thrust spaceship menu.
      */
     public static void showMenu() {
         var response = MenuConstants.DEFAULT_RESPONSE;
@@ -27,14 +27,15 @@ public class SpacecraftUI {
     }
 
     /**
-     * @return the available options.
+     * @return the menu.
      */
     private static String menu() {
         final var menu = new StringBuilder();
 
-        menu.append("\n# ----- SPACECRAFT MAIN MENU ----- #\n\n").append("What type of spacecraft do you want to register?\n\n");
+        menu.append("\n# ----- THRUST SPACESHIP MAIN MENU ----- #\n\n");
+        menu.append("What type of thrust spaceship do you want to register?\n\n");
 
-        Arrays.stream(SpacecraftEnum.values())
+        Arrays.stream(ThrustSpaceshipEnum.values())
                 .forEach(option -> menu.append(option.getOption())
                         .append(". ")
                         .append(option.getMessage())
@@ -49,13 +50,13 @@ public class SpacecraftUI {
      * @param response the selected option.
      */
     private static void goTo(int response) {
-        if (response == SpacecraftEnum.MANNED.getOption()) {
-            System.out.println("manned spaceship");
-        } else if (response == SpacecraftEnum.THRUST.getOption()) {
-            ThrustSpaceshipUI.showMenu();
-        } else if (response == SpacecraftEnum.BACK.getOption()) {
-            RegisterUI.showMenu();
-        } else if (response == SpacecraftEnum.EXIT.getOption()) {
+        if (response == ThrustSpaceshipEnum.ROBOTIC.getOption()) {
+            System.out.println("robotic");
+        } else if (response == ThrustSpaceshipEnum.SHUTTLE.getOption()) {
+            System.out.println("shuttle");
+        } else if (response == ThrustSpaceshipEnum.BACK.getOption()) {
+            SpacecraftUI.showMenu();
+        } else if (response == ThrustSpaceshipEnum.EXIT.getOption()) {
             UtilsUI.close();
         } else {
             System.out.println(MenuConstants.NOT_VALID);
