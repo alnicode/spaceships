@@ -1,6 +1,6 @@
 package com.alnicode.spaceships.view;
 
-import com.alnicode.spaceships.util.enums.MenuOption;
+import com.alnicode.spaceships.util.enums.MenuEnum;
 import java.util.Arrays;
 
 /**
@@ -35,7 +35,7 @@ public class MenuUI {
 
         menu.append("\nWelcome!\n").append("What do you want to do?\n\n");
 
-        Arrays.stream(MenuOption.values())
+        Arrays.stream(MenuEnum.values())
                 .forEach(option -> menu.append(option.getOption())
                         .append(". ").append(option.getMessage())
                         .append("\n"));

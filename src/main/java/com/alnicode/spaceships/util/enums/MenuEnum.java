@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
  */
 @RequiredArgsConstructor
 @Getter
-public enum MenuOption {
+public enum MenuEnum {
     REGISTER(1, "Register inventories and spaceships."),
     CONSULT(2, "Search or consult inventories and spaceships."),
     EXIT(3, "Exit");
