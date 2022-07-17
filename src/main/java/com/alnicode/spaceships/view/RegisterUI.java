@@ -1,5 +1,6 @@
 package com.alnicode.spaceships.view;
 
+import com.alnicode.spaceships.util.constants.MenuConstants;
 import com.alnicode.spaceships.util.enums.RegisterEnum;
 import java.util.Arrays;
 
@@ -16,13 +17,13 @@ public class RegisterUI {
      * Show the main menu.
      */
     public static void showMenu() {
-        var response = -1;
+        var response = MenuConstants.DEFAULT_RESPONSE;
 
         do {
             response = UtilsUI.numericResponse(menu());
 
             goTo(response);
-        } while (response != -1);
+        } while (response != MenuConstants.DEFAULT_RESPONSE);
     }
 
     /**

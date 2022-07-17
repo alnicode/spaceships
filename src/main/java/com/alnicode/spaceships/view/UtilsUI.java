@@ -1,5 +1,6 @@
 package com.alnicode.spaceships.view;
 
+import com.alnicode.spaceships.util.constants.MenuConstants;
 import java.util.Scanner;
 
 /**
@@ -38,7 +39,7 @@ public class UtilsUI {
         try {
             return Integer.parseInt(response(message));
         } catch (NumberFormatException ex) {
-            return 0;
+            return MenuConstants.DEFAULT_RESPONSE;
         }
     }
 
