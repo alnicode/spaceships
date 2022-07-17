@@ -44,21 +44,21 @@ public class MenuUI {
         return menu.toString();
     }
 
+    /**
+     * Got to the next menu or close the application.
+     *
+     * @param response the selected option.
+     */
     private static void goTo(int response) {
-        switch (response) {
-            case 1:
-                RegisterUI.showMenu();
-                break;
-            case 2:
-                System.out.println("2");
-                break;
-            case 3:
-                UtilsUI.close();
-                break;
-            default:
-                System.out.println("\nnot valid\n");
-                showMenu();
-                break;
+        if (response == MenuEnum.REGISTER.getOption()) {
+            RegisterUI.showMenu();
+        } else if (response == MenuEnum.CONSULT.getOption()) {
+            System.out.println("2");
+        } else if (response == MenuEnum.EXIT.getOption()) {
+            UtilsUI.close();
+        } else {
+            System.out.println("\nNot valid");
+            showMenu();
         }
     }
 

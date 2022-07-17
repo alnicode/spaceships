@@ -44,24 +44,23 @@ public class RegisterUI {
         return menu.toString();
     }
 
+    /**
+     * Go to the next or previous menu.
+     *
+     * @param response the selected option.
+     */
     private static void goTo(int response) {
-        switch (response) {
-            case 1:
-                System.out.println("inventory");
-                break;
-            case 2:
-                SpacecraftUI.showMenu();
-                break;
-            case 3:
-                MenuUI.showMenu();
-                break;
-            case 0:
-                UtilsUI.close();
-                break;
-            default:
-                System.out.println("\nnot valid\n");
-                showMenu();
-                break;
+        if (response == RegisterEnum.INVENTORY.getOption()) {
+            System.out.println("inventory");
+        } else if (response == RegisterEnum.SPACECRAFT.getOption()) {
+            SpacecraftUI.showMenu();
+        } else if (response == RegisterEnum.BACK.getOption()) {
+            MenuUI.showMenu();
+        } else if (response == RegisterEnum.EXIT.getOption()) {
+            UtilsUI.close();
+        } else {
+            System.out.println("\nNot valid.");
+            showMenu();
         }
     }
 
